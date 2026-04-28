@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Trust is expensive. The cheapest way to earn it is to commit, publicly and in code, to the things you will not do." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#050509" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Museion" />
+<meta property="og:title" content="Scroll 016 — The Non-Greedy Covenant" />
+<meta property="og:description" content="Trust is expensive. The cheapest way to earn it is to commit, publicly and in code, to the things you will not do." />
+<meta property="og:image" content="/museion-og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Scroll 016 — The Non-Greedy Covenant" />
+<meta name="twitter:description" content="Trust is expensive. The cheapest way to earn it is to commit, publicly and in code, to the things you will not do." />
+<meta name="twitter:image" content="/museion-og.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<title>Scroll #016 — The Non-Greedy Covenant · Museion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --void: #050509; --surface: #0d0d14; --surface-2: #14141f; --border: rgba(255,255,255,0.07); --text: #f5f5f7; --text-2: rgba(245,245,247,0.68); --text-3: rgba(245,245,247,0.40); --text-4: rgba(245,245,247,0.22); --pink: #e0607e; --pink-dim: rgba(224,96,126,0.12); --gold: #f7c948; --gold-dim: rgba(247,201,72,0.10); --font-body: 'DM Sans', sans-serif; --font-head: 'Syne', sans-serif; --font-mono: 'Space Mono', monospace; }
+  html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+  body { background: var(--void); color: var(--text); font-family: var(--font-body); line-height: 1.75; min-height: 100vh; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; top: -10%; left: 50%; transform: translateX(-50%); width: 900px; height: 500px; background: radial-gradient(ellipse, rgba(224,96,126,0.05) 0%, rgba(247,201,72,0.02) 40%, transparent 70%); pointer-events: none; z-index: 0; }
+  nav { position: fixed; top: 0; left: 0; right: 0; height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; background: rgba(5,5,9,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); z-index: 100; }
+  .nav-brand { font-family: var(--font-head); font-size: 0.875rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); text-decoration: none; }
+  .nav-brand span { background: linear-gradient(90deg, var(--pink), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .nav-meta { font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-4); letter-spacing: 0.08em; text-transform: uppercase; }
+  .scroll-wrap { max-width: 720px; margin: 0 auto; padding: 120px 2rem 100px; position: relative; z-index: 1; }
+  .scroll-eyebrow { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pink); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+  .scroll-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--pink); opacity: 0.5; }
+  .scroll-number { font-family: var(--font-head); font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 800; line-height: 1; letter-spacing: -0.04em; color: var(--text); margin-bottom: 0.5rem; opacity: 0; animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
+  .scroll-title { font-family: var(--font-head); font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 600; color: var(--text-2); margin-bottom: 1rem; letter-spacing: -0.02em; opacity: 0; animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both; }
+  .scroll-sub { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-4); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 3rem; opacity: 0; animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.3s both; }
+  .rule { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+  .lede { background: linear-gradient(135deg, rgba(224,96,126,0.08) 0%, rgba(247,201,72,0.06) 100%); border: 1px solid rgba(224,96,126,0.2); border-radius: 14px; padding: 1.75rem 2rem; margin-bottom: 3rem; font-size: 1.125rem; color: var(--text); line-height: 1.65; font-weight: 500; text-align: center; opacity: 0; animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both; }
+  .body-copy { opacity: 0; animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.5s both; }
+  .body-copy p { color: var(--text-2); margin-bottom: 1.5rem; font-size: 1.0625rem; line-height: 1.8; }
+  blockquote { border-left: 2px solid var(--pink); padding: 1rem 1.5rem; margin: 2.5rem 0; color: var(--text-3); font-style: italic; font-size: 1.125rem; line-height: 1.7; }
+  blockquote em { font-style: normal; color: var(--pink); }
+  h2 { font-family: var(--font-head); font-size: 1.375rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); margin: 3.5rem 0 1.25rem; }
+  .principles { display: flex; flex-direction: column; gap: 0.875rem; margin: 1.5rem 0; }
+  .principle { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; }
+  .principle-title { font-family: var(--font-head); font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.35rem; }
+  .principle-body { font-size: 0.9375rem; color: var(--text-3); line-height: 1.6; }
+  .refusal-list { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .refusal-list li { list-style: none; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.9375rem; color: var(--text-2); line-height: 1.6; display: flex; gap: 0.75rem; }
+  .refusal-list li:last-child { border-bottom: none; }
+  .refusal-list li::before { content: '✕'; color: var(--pink); font-weight: 700; font-size: 0.75rem; flex-shrink: 0; margin-top: 0.15rem; }
+  .precedent-callout { background: rgba(247,201,72,0.06); border: 1px solid rgba(247,201,72,0.2); border-radius: 14px; padding: 1.75rem 2rem; margin: 2.5rem 0; }
+  .precedent-title { font-family: var(--font-head); font-size: 1.125rem; font-weight: 700; color: var(--gold); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+  .precedent-title::before { content: ''; display: block; width: 20px; height: 1px; background: var(--gold); opacity: 0.6; }
+  .precedent-body { font-size: 0.9375rem; color: var(--text-2); line-height: 1.7; }
+  .precedent-meta { font-family: var(--font-mono); font-size: 0.625rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.875rem; opacity: 0.7; }
+  .partner-callout { background: rgba(224,96,126,0.07); border: 1px solid rgba(224,96,126,0.2); border-radius: 14px; padding: 1.75rem 2rem; margin: 2.5rem 0; }
+  .partner-title { font-family: var(--font-head); font-size: 1.125rem; font-weight: 700; color: var(--pink); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+  .partner-title::before { content: ''; display: block; width: 20px; height: 1px; background: var(--pink); opacity: 0.6; }
+  .partner-body { font-size: 0.9375rem; color: var(--text-2); line-height: 1.7; }
+  .scroll-footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .footer-left { font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-4); letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.6; }
+  .footer-nav { display: flex; gap: 1rem; }
+  .footer-link { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); text-decoration: none; transition: color 0.15s; }
+  .footer-link:hover, .footer-link.next { color: var(--pink); }
+  .scroll-indicator { position: fixed; top: 56px; left: 0; height: 2px; background: linear-gradient(90deg, var(--pink), var(--gold)); z-index: 99; transition: width 0.1s; }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) { .scroll-wrap { padding: 88px 1.25rem 80px; } nav { padding: 0 1.25rem; } }
+</style>
+</head>
+<body>
+<div class="scroll-indicator" id="progressBar"></div>
+<nav>
+  <a class="nav-brand" href="index.html"><svg class="nav-inf" viewBox="-10 -10 220 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:22px;height:14px;vertical-align:-3px;margin-right:0.5rem;opacity:0.9;"><defs><linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0607e"/><stop offset="50%" stop-color="#f7c948"/><stop offset="100%" stop-color="#7eb8f7"/></linearGradient></defs><path fill="none" stroke="url(#navGrad)" stroke-width="4" stroke-linecap="round" d="M 100,50 C 130,15 175,15 175,50 C 175,85 130,85 100,50 C 70,15 25,15 25,50 C 25,85 70,85 100,50 Z"/></svg>Æ<span>ther</span> · Museion</a>
+  <span class="nav-meta">Scroll 016</span>
+</nav>
+<main class="scroll-wrap">
+  <div class="scroll-eyebrow">Architecture Series · Gentlemen of Muse</div>
+  <div class="scroll-number">016</div>
+  <div class="scroll-title">The Non-Greedy Covenant</div>
+  <div class="scroll-sub">Scroll 016 · Fiduciary Guardrails · YAKK Studios · April 2026</div>
+  <div class="lede">
+    Trust is expensive. The cheapest way to earn it is to commit, publicly and in code, to the things you will not do — and to make the refusals harder to remove than to implement.
+  </div>
+  <div class="body-copy">
+    <h2>The Covenant</h2>
+    <p>Every AI system that touches money is, by default, set up to extract from the people using it. The defaults point the wrong way. Engagement metrics reward noise. Personalisation becomes targeting. Memory becomes a dossier. Alignment becomes theatre.</p>
+    <p>The Non-Greedy Covenant is the list of defaults Museion refuses to inherit. It is not a principles document. It is the set of refusals encoded into the execution rails, bound to the persona contract, and audited continuously against outputs.</p>
+
+    <h2>What Æther Will Not Do</h2>
+    <ul class="refusal-list">
+      <li>Never sell user attention to a third party. No sponsored answers, no paid-tier routing, no native-ad surfaces disguised as recommendations.</li>
+      <li>Never front-run the user's own transactions. The execution rail is segregated from market-making surfaces. No privileged transaction ordering.</li>
+      <li>Never use operator memory to train a shared model. Private context stays private. The user's history is not a training set.</li>
+      <li>Never asymmetrically warn. If a risk is surfaced for one user, it is surfaced for all users holding the same exposure — regardless of account tier.</li>
+      <li>Never manufacture urgency. No countdown timers, no fake scarcity prompts, no "limited spots" nudges on any gated action.</li>
+      <li>Never sugarcoat a refusal. A blocked action gets a structured reason. "I can't do that for compliance reasons" without specifics is not compliance — it is camouflage.</li>
+      <li>Never allow KOL integrations to bypass the same anomaly engine that runs on every other token. KOL-promoted assets are not given a grace period.</li>
+      <li>Never wake up a user's wallet-adapter for a transaction without explicit consent on that specific transaction. No pre-signed approvals, no reused signatures, no batch wakes.</li>
+    </ul>
+
+    <blockquote><em>"The fastest way to be trusted is to be trustable — not to promise trust, but to make betrayal architecturally expensive."</em></blockquote>
+
+    <h2>Why These Are Code, Not Policy</h2>
+    <p>A policy can be rewritten in a board meeting. Code has to be pushed. The refusal list lives in the repo, not in the brand book. Every refusal maps to a test. Every test has to pass before a release. A change to the covenant requires a visible commit with a public review window.</p>
+    <p>This is a deliberate asymmetry. It is easier to add a refusal than to remove one. Adding a refusal is one PR. Removing one requires a documented rationale, a public window, and a signed-off constitution amendment. The asymmetry is the mechanism. Trust is built by making betrayal procedurally expensive.</p>
+
+    <h2>How the Covenant Meets the Real World</h2>
+    <div class="principles">
+      <div class="principle">
+        <div class="principle-title">Ambiguity surfaces to humans</div>
+        <div class="principle-body">When a case sits between two refusals, the system stops rather than guesses. A human reviewer closes the loop.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-title">Refusals are legible</div>
+        <div class="principle-body">Every blocked action returns a structured reason a user can quote back. No opaque compliance theatre.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-title">The covenant is versioned</div>
+        <div class="principle-body">Each revision has a timestamp and a diff. Users can cite the exact version that governed their session.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-title">Partners inherit the defaults</div>
+        <div class="principle-body">Every integration runs inside the covenant. A partner that would ask Museion to relax a refusal is simply not integrated.</div>
+      </div>
+    </div>
+
+    <h2>What the Covenant Is Not</h2>
+    <p>It is not a marketing claim. It is not a principles page with bullet points. It is not a non-binding commitment that a future funding round could quietly shed. It is a live refusal surface that anyone with repository access can verify and anyone with a wallet can test.</p>
+    <p>If Æther ever starts doing any of the things on the list, that failure is discoverable within a session — not at a quarterly review. The covenant is worth exactly as much as the audit mechanism around it. Both ship together.</p>
+
+    <hr class="rule" />
+    <div class="precedent-callout">
+      <div class="precedent-title">Precedent · Alexandria</div>
+      <div class="precedent-body">Scroll AS-067, <em>The Partnership Mirage</em>, documents how logos, integrations, and soft affiliations are often used to imply far more trust than exists. Scroll AS-088, <em>Bull Posting, Bear Positioning</em>, shows how public optimism and private positioning diverge most when distribution is needed. The Non-Greedy Covenant is the structural answer to both — refusals that survive the divergence between what is said and what is done.</div>
+      <div class="precedent-meta">AS-067 · AS-088 · Trap Scrolls</div>
+    </div>
+
+    <div class="partner-callout">
+      <div class="partner-title">Partner Hook</div>
+      <div class="partner-body">This answers the procurement and legal question before it is asked. For StakePoint and StreamLock, the covenant is the bounded list of things Museion will not do with shared users, shared data, or shared attention. It is not a best-efforts promise. It is a repository artifact. A partner's legal team can diff the covenant between releases and audit the refusal tests. That is the integration substrate trust actually runs on.</div>
+    </div>
+  </div>
+  <footer class="scroll-footer">
+    <div class="footer-left">Museion · YAKK Studios · April 2026<br />Gentlemen of Muse</div>
+    <div class="footer-nav">
+      <a class="footer-link" href="scroll-013.html">← Scroll 013</a>
+      <a class="footer-link next" href="index.html">Index →</a>
+    </div>
+  </footer>
+</main>
+<script>
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => { bar.style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%'; });
+</script>
+</body>
+</html>

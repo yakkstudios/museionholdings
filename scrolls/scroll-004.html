@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Not a general-purpose AI. Not a commercial chatbot. A purpose-built intelligence designed for one role — to be the most trustworthy AI companion in existence." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#050509" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Museion" />
+<meta property="og:title" content="Scroll 004 — Aether: The Loyal Intelligence" />
+<meta property="og:description" content="Not a general-purpose AI. Not a commercial chatbot. A purpose-built intelligence designed for one role — to be the most trustworthy AI companion in existence." />
+<meta property="og:image" content="/museion-og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Scroll 004 — Aether: The Loyal Intelligence" />
+<meta name="twitter:description" content="Not a general-purpose AI. Not a commercial chatbot. A purpose-built intelligence designed for one role — to be the most trustworthy AI companion in existence." />
+<meta name="twitter:image" content="/museion-og.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<title>Scroll #004 — Aether: The Loyal Intelligence · Museion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --void: #050509;
+    --surface: #0d0d14;
+    --surface-2: #14141f;
+    --border: rgba(255,255,255,0.07);
+    --text: #f5f5f7;
+    --text-2: rgba(245,245,247,0.68);
+    --text-3: rgba(245,245,247,0.40);
+    --text-4: rgba(245,245,247,0.22);
+    --pink: #e0607e;
+    --pink-dim: rgba(224,96,126,0.15);
+    --gold: #f7c948;
+    --gold-dim: rgba(247,201,72,0.12);
+    --font-body: 'DM Sans', sans-serif;
+    --font-head: 'Syne', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+  html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+  body {
+    background: var(--void);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.75;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(247,201,72,0.04) 0%, rgba(224,96,126,0.02) 45%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background: rgba(5,5,9,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+  }
+  .nav-brand {
+    font-family: var(--font-head);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-brand span { color: var(--gold); }
+  .nav-meta {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--text-4);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .scroll-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 120px 2rem 100px;
+    position: relative;
+    z-index: 1;
+  }
+  .scroll-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .scroll-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+  .scroll-number {
+    font-family: var(--font-head);
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both;
+  }
+  .scroll-title {
+    font-family: var(--font-head);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 600;
+    color: var(--text-2);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both;
+  }
+  .scroll-sub {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-4);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+  }
+  .rule { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+  .lede {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 12px 12px 0;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 3rem;
+    font-size: 1.0625rem;
+    color: var(--text);
+    line-height: 1.6;
+    font-weight: 500;
+    opacity: 0;
+    animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both;
+  }
+  .body-copy {
+    opacity: 0;
+    animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.5s both;
+  }
+  .body-copy p {
+    color: var(--text-2);
+    margin-bottom: 1.5rem;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+  blockquote {
+    border-left: 2px solid var(--gold);
+    padding: 1rem 1.5rem;
+    margin: 2.5rem 0;
+    color: var(--text-3);
+    font-style: italic;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+  blockquote em { font-style: normal; color: var(--gold); }
+  h2 {
+    font-family: var(--font-head);
+    font-size: 1.375rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin: 3.5rem 0 1rem;
+  }
+
+  /* Dimension table */
+  .dim-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9375rem;
+  }
+  .dim-table th {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-4);
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+  }
+  .dim-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-2);
+    vertical-align: top;
+  }
+  .dim-table tr:last-child td { border-bottom: none; }
+  .dim-table tr:hover td { background: var(--surface); }
+  .dim-num {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .dim-name {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  /* Comparison table */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9375rem;
+  }
+  .compare-table th {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-4);
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+  }
+  .compare-table td {
+    padding: 0.875rem 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-2);
+    vertical-align: top;
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table .label { color: var(--text-3); font-size: 0.9rem; }
+  .compare-table .aether-val { color: var(--gold); font-weight: 500; }
+
+  .scroll-footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-left {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--text-4);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+  .footer-nav { display: flex; gap: 1rem; }
+  .footer-link {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-link:hover { color: var(--gold); }
+  .footer-link.next { color: var(--gold); }
+
+  .scroll-indicator {
+    position: fixed;
+    top: 56px; left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), var(--pink));
+    z-index: 99;
+    transition: width 0.1s;
+  }
+
+  @keyframes riseIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @media (max-width: 640px) {
+    .scroll-wrap { padding: 88px 1.25rem 80px; }
+    nav { padding: 0 1.25rem; }
+    .dim-table, .compare-table { font-size: 0.8125rem; }
+    .dim-table th, .compare-table th { font-size: 0.625rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-indicator" id="progressBar"></div>
+
+<nav>
+  <a class="nav-brand" href="index.html"><svg class="nav-inf" viewBox="-10 -10 220 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:22px;height:14px;vertical-align:-3px;margin-right:0.5rem;opacity:0.9;"><defs><linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0607e"/><stop offset="50%" stop-color="#f7c948"/><stop offset="100%" stop-color="#7eb8f7"/></linearGradient></defs><path fill="none" stroke="url(#navGrad)" stroke-width="4" stroke-linecap="round" d="M 100,50 C 130,15 175,15 175,50 C 175,85 130,85 100,50 C 70,15 25,15 25,50 C 25,85 70,85 100,50 Z"/></svg>Æ<span>ther</span> · Museion</a>
+  <span class="nav-meta">Scroll 004</span>
+</nav>
+
+<main class="scroll-wrap">
+
+  <div class="scroll-eyebrow">Digital Scroll Series · The Model Layer</div>
+
+  <div class="scroll-number">004</div>
+  <div class="scroll-title">Aether: The Loyal Intelligence</div>
+  <div class="scroll-sub">Scroll 004 · The Model Layer · Museion · April 2026</div>
+
+  <div class="lede">
+    Not a general-purpose AI. Not a commercial chatbot. A purpose-built intelligence designed from the ground up for one role: to be the most trustworthy AI companion in existence.
+  </div>
+
+  <div class="body-copy">
+
+    <p>Every AI model in widespread use today was designed to be general. To answer any question from anyone in any context. This generalisation is a feature for platforms. It is a vulnerability for individuals. Aether was designed differently — with a single purpose, a single set of values, and a single beneficiary in mind.</p>
+
+    <p>The name is deliberate. Aether — the medium through which light moves, invisible and essential. Not the thing you see, but the thing that makes sight possible. Most people will never need to know the details of what Aether is. They will experience it only as the quality of the advice they receive, the accuracy of the risks that are surfaced, the calibration of the judgments that are made.</p>
+
+    <blockquote><em>"A model designed for everything is optimised for nothing. Aether is designed for one thing: your genuine advantage."</em></blockquote>
+
+    <hr class="rule" />
+
+    <h2>The Design Philosophy</h2>
+
+    <p>Conventional large language models are trained to be helpful, harmless, and honest — in that order, with a definition of "helpful" that primarily means "satisfying to the person asking." This ordering produces subtle but important distortions. Satisfaction and truth diverge constantly. When they do, a system optimised for satisfaction drifts toward the comfortable answer rather than the accurate one.</p>
+
+    <p><strong>Aether inverts this ordering. Truth comes first.</strong> Every other quality is evaluated in light of whether it serves genuine understanding rather than comfortable engagement. This makes Aether occasionally less pleasant to interact with. It makes it significantly more useful when the stakes are real.</p>
+
+    <p>The purpose is one specific thing: being the most reliable, most trustworthy, most capable personal intelligence an individual can have access to when navigating complex, consequential decisions in a world that is systematically stacked against them.</p>
+
+    <hr class="rule" />
+
+    <h2>The Eight Dimensions</h2>
+
+    <p>Aether's quality is assessed across eight dimensions. Each is weighted according to its importance for the Museion use case. None is treated as optional.</p>
+
+    <table class="dim-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Dimension</th>
+          <th>What It Measures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="dim-num">01</td>
+          <td><span class="dim-name">Factual Accuracy</span></td>
+          <td>Ground truth before all else</td>
+        </tr>
+        <tr>
+          <td class="dim-num">02</td>
+          <td><span class="dim-name">Calibrated Uncertainty</span></td>
+          <td>Confidence that matches the evidence</td>
+        </tr>
+        <tr>
+          <td class="dim-num">03</td>
+          <td><span class="dim-name">User Alignment</span></td>
+          <td>Your interests above platform interests</td>
+        </tr>
+        <tr>
+          <td class="dim-num">04</td>
+          <td><span class="dim-name">Contextual Depth</span></td>
+          <td>Memory-informed reasoning</td>
+        </tr>
+        <tr>
+          <td class="dim-num">05</td>
+          <td><span class="dim-name">Risk Sensitivity</span></td>
+          <td>Surfaces what matters before you ask</td>
+        </tr>
+        <tr>
+          <td class="dim-num">06</td>
+          <td><span class="dim-name">Autonomy Preservation</span></td>
+          <td>Leaves you more capable, not more dependent</td>
+        </tr>
+        <tr>
+          <td class="dim-num">07</td>
+          <td><span class="dim-name">Explainability</span></td>
+          <td>Reasoning available on request</td>
+        </tr>
+        <tr>
+          <td class="dim-num">08</td>
+          <td><span class="dim-name">Longitudinal Consistency</span></td>
+          <td>Stable values across time and context</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="rule" />
+
+    <h2>How Aether Differs</h2>
+
+    <p>The differences between Aether and a general-purpose AI system are not subtle. They are architectural.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>General-Purpose AI</th>
+          <th>Aether</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="label">Priority order</td>
+          <td>Helpful → Harmless → Honest</td>
+          <td class="aether-val">Honest → Aligned → Helpful</td>
+        </tr>
+        <tr>
+          <td class="label">Optimises for</td>
+          <td>User satisfaction</td>
+          <td class="aether-val">User advantage</td>
+        </tr>
+        <tr>
+          <td class="label">Memory</td>
+          <td>Session-only</td>
+          <td class="aether-val">Persistent, longitudinal</td>
+        </tr>
+        <tr>
+          <td class="label">Scope</td>
+          <td>Everything</td>
+          <td class="aether-val">One thing, done exceptionally</td>
+        </tr>
+        <tr>
+          <td class="label">Revenue model</td>
+          <td>Platform / advertiser</td>
+          <td class="aether-val">Direct user relationship</td>
+        </tr>
+        <tr>
+          <td class="label">Disagreement</td>
+          <td>Tends to defer</td>
+          <td class="aether-val">States position clearly</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="rule" />
+
+    <h2>Why Now</h2>
+
+    <p>The window for building loyal AI is narrowing. The closer AI becomes to genuinely powerful, the more valuable it becomes to capture it — to redirect its capabilities toward institutional interests, platform economics, or extractive agenda.</p>
+
+    <p>Aether is being built at the moment when the choice between "AI that serves people" and "AI that serves platforms" is still being made. Once that choice is locked in at scale, reversing it will be extraordinarily difficult.</p>
+
+    <p>The time to build the right kind of AI is now, before the wrong kind has become indispensable.</p>
+
+  </div>
+
+  <footer class="scroll-footer">
+    <div class="footer-left">
+      Museion · Digital Scroll Series · April 2026<br />
+      Gentlemen of Muse · Do Not Distribute
+    </div>
+    <div class="footer-nav">
+      <a class="footer-link" href="scroll-002.html">← Scroll 002</a>
+      <a class="footer-link next" href="scroll-013.html">Scroll 013 →</a>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    bar.style.width = pct + '%';
+  });
+</script>
+</body>
+</html>

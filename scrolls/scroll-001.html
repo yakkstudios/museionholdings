@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="One loyal companion. Infinite specialist depth. The AI relationship that was always missing — until now." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#050509" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Museion" />
+<meta property="og:title" content="Scroll 001 — The Personal Aether Protocol" />
+<meta property="og:description" content="One loyal companion. Infinite specialist depth. The AI relationship that was always missing — until now." />
+<meta property="og:image" content="/museion-og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Scroll 001 — The Personal Aether Protocol" />
+<meta name="twitter:description" content="One loyal companion. Infinite specialist depth. The AI relationship that was always missing — until now." />
+<meta name="twitter:image" content="/museion-og.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<title>Scroll #001 — The Personal Aether Protocol · Museion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --void: #050509;
+    --surface: #0d0d14;
+    --surface-2: #14141f;
+    --border: rgba(255,255,255,0.07);
+    --text: #f5f5f7;
+    --text-2: rgba(245,245,247,0.68);
+    --text-3: rgba(245,245,247,0.40);
+    --text-4: rgba(245,245,247,0.22);
+    --pink: #e0607e;
+    --pink-dim: rgba(224,96,126,0.15);
+    --gold: #f7c948;
+    --font-body: 'DM Sans', sans-serif;
+    --font-head: 'Syne', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+  html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+  body {
+    background: var(--void);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.75;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Ambient glow */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(224,96,126,0.05) 0%, rgba(247,201,72,0.02) 45%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── Nav */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background: rgba(5,5,9,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+  }
+  .nav-brand {
+    font-family: var(--font-head);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-brand span { color: var(--pink); }
+  .nav-meta {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--text-4);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ── Layout */
+  .scroll-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 120px 2rem 100px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Scroll header */
+  .scroll-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .scroll-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--pink);
+    opacity: 0.5;
+  }
+  .scroll-number {
+    font-family: var(--font-head);
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both;
+  }
+  .scroll-title {
+    font-family: var(--font-head);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 600;
+    color: var(--text-2);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both;
+  }
+  .scroll-sub {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-4);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+  }
+
+  /* ── Divider */
+  .rule {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+
+  /* ── Lede / pull quote */
+  .lede {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--pink);
+    border-radius: 0 12px 12px 0;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 3rem;
+    font-size: 1.0625rem;
+    color: var(--text);
+    line-height: 1.6;
+    font-weight: 500;
+    opacity: 0;
+    animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both;
+  }
+
+  /* ── Body copy */
+  .body-copy {
+    opacity: 0;
+    animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.5s both;
+  }
+  .body-copy p {
+    color: var(--text-2);
+    margin-bottom: 1.5rem;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+  .body-copy p:last-child { margin-bottom: 0; }
+
+  /* ── Pull quote inline */
+  blockquote {
+    border-left: 2px solid var(--gold);
+    padding: 1rem 1.5rem;
+    margin: 2.5rem 0;
+    color: var(--text-3);
+    font-style: italic;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+  blockquote em { font-style: normal; color: var(--gold); }
+
+  /* ── Section heading */
+  h2 {
+    font-family: var(--font-head);
+    font-size: 1.375rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin: 3.5rem 0 1rem;
+  }
+  h2:first-of-type { margin-top: 0; }
+
+  /* ── Principle cards */
+  .principles {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .principle {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    transition: border-color 0.2s;
+  }
+  .principle:hover { border-color: rgba(224,96,126,0.25); }
+  .principle-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--pink);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .principle-title {
+    font-family: var(--font-head);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+  .principle-body {
+    font-size: 0.9375rem;
+    color: var(--text-2);
+    line-height: 1.65;
+  }
+
+  /* ── Callout box */
+  .callout {
+    background: var(--pink-dim);
+    border: 1px solid rgba(224,96,126,0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2.5rem 0;
+    font-size: 1rem;
+    color: var(--text-2);
+    line-height: 1.7;
+  }
+
+  /* ── Footer */
+  .scroll-footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-left {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--text-4);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+  .footer-nav {
+    display: flex;
+    gap: 1rem;
+  }
+  .footer-link {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    text-decoration: none;
+    transition: color 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .footer-link:hover { color: var(--pink); }
+  .footer-link.next { color: var(--pink); }
+
+  /* ── Scroll indicator */
+  .scroll-indicator {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--pink), var(--gold));
+    z-index: 99;
+    transition: width 0.1s;
+  }
+
+  /* ── Animations */
+  @keyframes riseIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Responsive */
+  @media (max-width: 640px) {
+    .scroll-wrap { padding: 88px 1.25rem 80px; }
+    nav { padding: 0 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-indicator" id="progressBar"></div>
+
+<nav>
+  <a class="nav-brand" href="index.html"><svg class="nav-inf" viewBox="-10 -10 220 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:22px;height:14px;vertical-align:-3px;margin-right:0.5rem;opacity:0.9;"><defs><linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0607e"/><stop offset="50%" stop-color="#f7c948"/><stop offset="100%" stop-color="#7eb8f7"/></linearGradient></defs><path fill="none" stroke="url(#navGrad)" stroke-width="4" stroke-linecap="round" d="M 100,50 C 130,15 175,15 175,50 C 175,85 130,85 100,50 C 70,15 25,15 25,50 C 25,85 70,85 100,50 Z"/></svg>Æ<span>ther</span> · Museion</a>
+  <span class="nav-meta">Scroll 001</span>
+</nav>
+
+<main class="scroll-wrap">
+
+  <div class="scroll-eyebrow">Digital Scroll Series · The Foundation</div>
+
+  <div class="scroll-number">001</div>
+  <div class="scroll-title">The Personal Aether Protocol</div>
+  <div class="scroll-sub">Scroll 001 · The Foundation · Museion · April 2026</div>
+
+  <div class="lede">
+    One loyal companion. Infinite specialist depth. The AI relationship that was always missing — until now.
+  </div>
+
+  <div class="body-copy">
+
+    <p>We have been building AI tools. What we actually needed was an AI relationship. There is a profound difference between the two — and that difference is the entire reason Museion exists.</p>
+
+    <p>For a decade, the promise of artificial intelligence has been framed as a productivity multiplier. A faster search. A smarter autocomplete. A tireless assistant that never sleeps. The tools arrived. The relationship never did.</p>
+
+    <p>A tool does not know you. It has no memory of yesterday's conversation, no awareness of the choices you made six months ago, no capacity to connect what you said on Tuesday to what you are deciding on Friday. A tool hands you information and waits. It has no stake in whether that information serves you well.</p>
+
+    <p>A relationship is different. A relationship accumulates. It builds a model of who you are, what you value, how you think — and it uses that model to serve you better with every single interaction. This is what Aether is designed to be.</p>
+
+    <blockquote><em>"The most powerful AI is not the one with the most parameters. It is the one that knows you well enough to know when you are about to make a mistake — and cares enough to say so."</em></blockquote>
+
+    <hr class="rule" />
+
+    <h2>The Single Interface Problem</h2>
+
+    <p>Modern knowledge workers live inside a paradox. They have access to more intelligence tools than any generation in history — and yet they feel less informed, less certain, and more overwhelmed than ever. The reason is fragmentation.</p>
+
+    <p>Switching between tools is cognitive tax. Every context switch costs attention. Every separate system has its own interface, its own assumptions, its own idea of what you need. The result is not augmented intelligence — it is distributed confusion.</p>
+
+    <p>Aether solves this through a single, persistent, loyal interface. Not a portal to dozens of tools. A single companion who has access to those capabilities internally, routes tasks to the right depth of expertise invisibly, and returns to you with a unified, considered answer — in your voice, at the right level of detail, at exactly the right moment.</p>
+
+    <p>You never see the machinery. You see Aether. And Aether sees you.</p>
+
+    <hr class="rule" />
+
+    <h2>The Five Principles</h2>
+
+    <div class="principles">
+      <div class="principle">
+        <div class="principle-label">Principle 01</div>
+        <div class="principle-title">Fiduciary First</div>
+        <div class="principle-body">Aether is aligned to your interests — not to engagement metrics, not to platform retention, not to advertiser objectives. Every answer is evaluated against one question: does this serve the person in front of me?</div>
+      </div>
+      <div class="principle">
+        <div class="principle-label">Principle 02</div>
+        <div class="principle-title">Memory as Foundation</div>
+        <div class="principle-body">Context does not reset at the start of each session. Aether builds a living model of your goals, decisions, preferences, and history — and carries that model forward across every conversation. The longer the relationship, the more powerful it becomes.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-label">Principle 03</div>
+        <div class="principle-title">Truth Over Vibes</div>
+        <div class="principle-body">Aether does not tell you what you want to hear. It tells you what is true, what is uncertain, and what the evidence actually supports. Comfortable lies are a form of betrayal. Aether chooses clarity, always — even when clarity is uncomfortable.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-label">Principle 04</div>
+        <div class="principle-title">Voice First</div>
+        <div class="principle-body">The natural interface for a loyal companion is conversation, not dashboards. Aether is built voice-first — designed to listen, to ask the right clarifying question when needed, and to respond in a way that feels like counsel from a trusted advisor.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-label">Principle 05</div>
+        <div class="principle-title">Calibrated Signal</div>
+        <div class="principle-body">When something deserves your attention, Aether calibrates the signal. A minor risk is a note. A serious risk is a clear flag. A critical risk stops the conversation. Constant alarm fatigue is as dangerous as no alarm at all.</div>
+      </div>
+    </div>
+
+    <hr class="rule" />
+
+    <h2>The Hidden Council</h2>
+
+    <p>Here is what makes Aether different from every general-purpose AI assistant currently available: behind the single loyal voice lies a council of 19 specialists, each with deep expertise in a specific domain.</p>
+
+    <p>When you ask Aether a question that requires legal reasoning, the legal specialist engages. When you ask about a financial decision, the financial specialist runs the analysis. When you need hard data, the data specialist pulls it.</p>
+
+    <p>You never manage any of this. You never route your question. You never decide which tool to open. Aether handles the orchestration invisibly — synthesising the best thinking across every relevant domain and returning it to you as a single, considered, trustworthy answer.</p>
+
+    <p>This is what separates a loyal AI companion from an AI tool catalogue. Depth of capability without fragmentation of experience.</p>
+
+    <hr class="rule" />
+
+    <h2>The Memory Moat</h2>
+
+    <p>The single greatest defensible advantage in personal AI is not the model. Models can be replicated, fine-tuned, distilled. The defensible advantage is the accumulated context of a long relationship.</p>
+
+    <p>Every conversation you have with Aether makes it more accurate for you specifically. Every decision you share, every goal you articulate, every preference you express — these become part of a living model of who you are. This model is not stored to be sold. It exists for one purpose: to serve you better tomorrow than it served you today.</p>
+
+    <div class="callout">
+      This is the memory moat. And it compounds over time in a way that no amount of raw capability from a competitor can overcome. You are not just using Aether. You are building something together.
+    </div>
+
+  </div>
+
+  <footer class="scroll-footer">
+    <div class="footer-left">
+      Museion · Digital Scroll Series · April 2026<br />
+      Gentlemen of Muse · Do Not Distribute
+    </div>
+    <div class="footer-nav">
+      <a class="footer-link" href="index.html">← Index</a>
+      <a class="footer-link next" href="scroll-002.html">Scroll 002 →</a>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  });
+</script>
+</body>
+</html>

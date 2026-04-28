@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Museion Holdings — House of Museion</title>
+<meta name="description" content="Museion Holdings — a sovereign-AI-first holding company. The brand house. The product. The order. Eight packs, six pillars, one parent." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#050509" />
+<link rel="canonical" href="https://museionholdings.xyz/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Museion Holdings" />
+<meta property="og:title" content="Museion Holdings — House of Museion" />
+<meta property="og:description" content="A sovereign-AI-first holding company. Eight brand packs, six strategic pillars, one parent. House of Museion." />
+<meta property="og:image" content="https://museionholdings.xyz/museion-og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://museionholdings.xyz/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Museion Holdings — House of Museion" />
+<meta name="twitter:description" content="A sovereign-AI-first holding company. House of Museion." />
+<meta name="twitter:image" content="https://museionholdings.xyz/museion-og.png" />
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --void: #050509;
+    --surface: #0d0d14;
+    --surface-2: #14141f;
+    --surface-3: #1c1c2a;
+    --border: rgba(255,255,255,0.07);
+    --border-soft: rgba(255,255,255,0.04);
+    --text: #f5f5f7;
+    --text-2: rgba(245,245,247,0.68);
+    --text-3: rgba(245,245,247,0.40);
+    --text-4: rgba(245,245,247,0.22);
+    --pink: #e0607e;
+    --pink-dim: rgba(224,96,126,0.12);
+    --gold: #f7c948;
+    --gold-dim: rgba(247,201,72,0.10);
+    --blue: #7eb8f7;
+    --wine: #c83d54;
+    --rose: #d8869c;
+    --azulejo: #7da7c4;
+    --font-body: 'DM Sans', sans-serif;
+    --font-head: 'Syne', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --font-jp:   'Noto Sans JP', 'Syne', sans-serif;
+  }
+  html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+  body {
+    background: var(--void); color: var(--text);
+    font-family: var(--font-body); line-height: 1.65;
+    min-height: 100vh; overflow-x: hidden;
+  }
+  body::before {
+    content: ''; position: fixed; top: -15%; left: 50%;
+    transform: translateX(-50%);
+    width: 1000px; height: 600px;
+    background: radial-gradient(ellipse,
+      rgba(224,96,126,0.05) 0%,
+      rgba(247,201,72,0.03) 35%,
+      transparent 65%
+    );
+    pointer-events: none; z-index: 0;
+  }
+
+  /* ── NAV ────────────────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem;
+    background: rgba(5,5,9,0.88);
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+  }
+  .nav-brand {
+    font-family: var(--font-head);
+    font-size: 0.9375rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text); text-decoration: none;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .nav-brand .accent { background: linear-gradient(90deg,var(--pink),var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .nav-brand .nav-inf { width: 22px; height: 14px; opacity: 0.9; }
+  .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+  .nav-link {
+    font-family: var(--font-mono); font-size: 0.6875rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-3); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: var(--text); }
+  .nav-badge {
+    font-family: var(--font-mono); font-size: 0.625rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--pink); border: 1px solid rgba(224,96,126,0.3);
+    border-radius: 999px; padding: 0.25rem 0.75rem;
+  }
+  @media (max-width: 720px) {
+    .nav-link { display: none; }
+  }
+
+  /* ── EMBLEM ─────────────────────────────────────────────────── */
+  .hero-emblem {
+    width: 220px; height: 128px; margin: 0 auto 2rem;
+    position: relative; opacity: 0;
+    animation: emblemIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both, breathe 7s ease-in-out 1.2s infinite;
+  }
+  @keyframes emblemIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  .inf-svg { width: 100%; height: 100%; overflow: visible; }
+  .inf-base { stroke: rgba(245,245,247,0.12); stroke-width: 1.2; }
+  .inf-mid  { stroke: rgba(245,245,247,0.24); stroke-width: 0.9; }
+  .inf-flow {
+    stroke: url(#aetherGrad); stroke-width: 2.6;
+    stroke-dasharray: 1; stroke-dashoffset: 0;
+    filter: url(#aetherGlow);
+    animation: infFlow 6.5s linear infinite;
+  }
+  @keyframes infFlow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -2; } }
+  .inf-diamond {
+    fill: var(--gold);
+    filter: drop-shadow(0 0 8px rgba(247,201,72,0.6));
+    animation: diamondPulse 3.2s ease-in-out infinite;
+  }
+  @keyframes diamondPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+  @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.025); } }
+
+  /* ── HERO ───────────────────────────────────────────────────── */
+  .hero {
+    max-width: 800px; margin: 0 auto;
+    padding: 110px 2rem 70px;
+    position: relative; z-index: 1;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-mono); font-size: 0.6875rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-4); margin-bottom: 1.25rem;
+    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both;
+  }
+  .hero-title {
+    font-family: var(--font-head);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800; letter-spacing: -0.04em; line-height: 1;
+    margin-bottom: 0.75rem;
+    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+  }
+  .hero-title .gradient {
+    background: linear-gradient(135deg, var(--pink), var(--gold), var(--blue));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .hero-subtitle {
+    font-size: 1.125rem; color: var(--text-3);
+    max-width: 620px; margin: 1.25rem auto 2.5rem; line-height: 1.7;
+    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both;
+  }
+  .hero-divider {
+    width: 72px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold) 30%, var(--pink) 70%, transparent);
+    margin: 0 auto 2.5rem;
+    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.45s both;
+  }
+  .kaizen-mark {
+    font-family: var(--font-jp); font-size: 1rem;
+    letter-spacing: 0.36em; color: var(--gold);
+    text-shadow: 0 0 14px rgba(247,201,72,0.3);
+    margin-top: 1rem; opacity: 0.85;
+  }
+
+  /* ── SECTION CONTAINERS ─────────────────────────────────────── */
+  section {
+    max-width: 800px; margin: 0 auto;
+    padding: 60px 2rem;
+    position: relative; z-index: 1;
+  }
+  .section-label {
+    font-family: var(--font-mono); font-size: 0.6875rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-4); margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  .section-intro {
+    font-family: var(--font-head); font-size: 1.625rem;
+    font-weight: 500; letter-spacing: -0.02em; line-height: 1.25;
+    color: var(--text); margin-bottom: 1.25rem;
+  }
+  .section-intro .accent { color: var(--gold); }
+  .section-intro .accent-pink { color: var(--pink); }
+
+  .section-prose p { color: var(--text-2); margin-bottom: 1rem; font-size: 0.9375rem; line-height: 1.7; }
+  .section-prose p strong { color: var(--text); font-weight: 600; }
+  .section-prose p em { color: var(--pink); font-style: italic; }
+
+  .section-cta {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: var(--font-mono); font-size: 0.75rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold); text-decoration: none;
+    border: 1px solid rgba(247,201,72,0.3);
+    border-radius: 999px; padding: 0.5rem 1rem;
+    background: var(--gold-dim);
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .section-cta:hover {
+    background: rgba(247,201,72,0.18);
+    border-color: rgba(247,201,72,0.5);
+    transform: translateX(2px);
+  }
+  .section-cta::after { content: '→'; }
+
+  /* ── HOUSE NOTE ─────────────────────────────────────────────── */
+  .house-note {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px; padding: 1.5rem 1.75rem; margin-bottom: 2.5rem;
+  }
+  .house-note-label {
+    font-family: var(--font-mono); font-size: 0.625rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.5rem;
+  }
+  .house-note-body { font-size: 0.9375rem; color: var(--text-2); line-height: 1.65; }
+  .house-note-body em { color: var(--pink); font-style: italic; }
+
+  /* ── BRAND HOUSE GRID ───────────────────────────────────────── */
+  .brand-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  @media (min-width: 720px) { .brand-grid { grid-template-columns: repeat(4, 1fr); } }
+  .brand-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.1rem 1rem 1rem;
+    text-decoration: none; color: inherit;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    display: flex; flex-direction: column; gap: 0.6rem;
+  }
+  .brand-card:hover {
+    background: var(--surface-2);
+    border-color: var(--card-accent, rgba(224,96,126,0.4));
+    transform: translateY(-2px);
+  }
+  .brand-card-num {
+    font-family: var(--font-mono); font-size: 0.625rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--card-accent, var(--pink));
+  }
+  .brand-card-mini {
+    width: 100%; aspect-ratio: 1 / 1; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.95); font-family: var(--font-head);
+    font-size: 1.6rem; font-weight: 800; letter-spacing: -0.04em;
+    position: relative; overflow: hidden;
+    background-image: linear-gradient(135deg, var(--card-accent, var(--pink)) 0%, var(--card-accent-2, var(--gold)) 100%);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+  }
+  .brand-card-mini::before {
+    content: ''; position: absolute; inset: 4px; border-radius: 6px;
+    background: rgba(0,0,0,0.18); pointer-events: none;
+  }
+  .brand-card-mini span { position: relative; z-index: 1; }
+  .brand-card-name {
+    font-family: var(--font-head); font-size: 0.9375rem;
+    font-weight: 600; color: var(--text); line-height: 1.2;
+  }
+  .brand-card-role {
+    font-size: 0.75rem; color: var(--text-3);
+    line-height: 1.45; flex: 1;
+  }
+
+  /* ── SCROLL ENTRY ───────────────────────────────────────────── */
+  .scroll-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .scroll-entry {
+    display: flex; align-items: center; gap: 1.5rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.25rem 1.5rem;
+    text-decoration: none; color: inherit;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    position: relative; overflow: hidden;
+  }
+  .scroll-entry::after {
+    content: ''; position: absolute; right: 1.5rem; top: 50%;
+    transform: translateY(-50%); width: 20px; height: 20px;
+    border-radius: 50%; background: var(--surface-3);
+    opacity: 0; transition: opacity 0.2s;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 5H8M8 5L5 2M8 5L5 8' stroke='rgba(245,245,247,0.4)' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: center;
+  }
+  .scroll-entry:hover { background: var(--surface-2); transform: translateX(3px); border-color: rgba(224,96,126,0.25); }
+  .scroll-entry:hover::after { opacity: 1; }
+  .entry-num {
+    font-family: var(--font-head); font-size: 1.75rem; font-weight: 800;
+    line-height: 1; color: var(--text-2); min-width: 52px; text-align: center; flex-shrink: 0;
+  }
+  .entry-body { flex: 1; min-width: 0; }
+  .entry-title {
+    font-family: var(--font-head); font-size: 1rem; font-weight: 600;
+    color: var(--text); margin-bottom: 0.25rem;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .entry-desc { font-size: 0.875rem; color: var(--text-3); line-height: 1.5; }
+  .entry-badge {
+    font-family: var(--font-mono); font-size: 0.5625rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.2rem 0.6rem; border-radius: 999px; flex-shrink: 0;
+    color: var(--pink); border: 1px solid rgba(224,96,126,0.3); background: var(--pink-dim);
+  }
+
+  /* ── FAMILY WING ────────────────────────────────────────────── */
+  .family-grid {
+    display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.25rem;
+  }
+  @media (min-width: 720px) { .family-grid { grid-template-columns: 1fr 1fr; } }
+  .family-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--wine);
+    border-radius: 12px; padding: 1.5rem 1.75rem;
+  }
+  .family-card.alis { border-left-color: var(--azulejo); }
+  .family-card-pack {
+    font-family: var(--font-mono); font-size: 0.625rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.4rem;
+  }
+  .family-card-name {
+    font-family: var(--font-head); font-size: 1.25rem;
+    font-weight: 700; color: var(--text); margin-bottom: 0.5rem; line-height: 1.2;
+  }
+  .family-card-tag {
+    font-family: var(--font-body); font-style: italic;
+    font-size: 0.875rem; color: var(--rose); margin-bottom: 0.85rem;
+  }
+  .family-card-body {
+    font-size: 0.875rem; color: var(--text-3); line-height: 1.6;
+  }
+
+  /* ── FOOTER ─────────────────────────────────────────────────── */
+  footer {
+    border-top: 1px solid var(--border); padding: 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+    max-width: 800px; margin: 60px auto 0; position: relative; z-index: 1;
+  }
+  .footer-text {
+    font-family: var(--font-mono); font-size: 0.6875rem;
+    color: var(--text-4); letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.6;
+  }
+  .footer-brand {
+    font-family: var(--font-head); font-size: 0.875rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    background: linear-gradient(90deg, var(--pink), var(--gold));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .footer-brand .kaizen-foot {
+    font-family: var(--font-jp); margin-left: 0.6rem;
+    color: var(--gold); -webkit-text-fill-color: var(--gold);
+    background: none; opacity: 0.85; letter-spacing: 0.2em;
+  }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    nav { padding: 0 1.25rem; }
+    .hero { padding: 90px 1.25rem 50px; }
+    .hero-emblem { width: 180px; height: 104px; }
+    section { padding: 50px 1.25rem; }
+    .scroll-entry { padding: 1rem 1.25rem; gap: 1rem; }
+    .entry-num { font-size: 1.25rem; min-width: 36px; }
+    footer { padding: 2rem 1.25rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-emblem, .inf-flow, .inf-diamond { animation: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">
+    <svg class="nav-inf" viewBox="-10 -10 220 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#e0607e"/><stop offset="50%" stop-color="#f7c948"/><stop offset="100%" stop-color="#7eb8f7"/>
+        </linearGradient>
+      </defs>
+      <path fill="none" stroke="url(#navGrad)" stroke-width="4" stroke-linecap="round"
+        d="M 100,50 C 130,15 175,15 175,50 C 175,85 130,85 100,50 C 70,15 25,15 25,50 C 25,85 70,85 100,50 Z"/>
+    </svg>
+    Æ<span class="accent">ther</span> · Museion
+  </a>
+  <div class="nav-right">
+    <a class="nav-link" href="#house">House</a>
+    <a class="nav-link" href="/scrolls/">Scrolls</a>
+    <a class="nav-link" href="#family">Family</a>
+    <span class="nav-badge">House of Museion</span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-emblem">
+    <svg class="inf-svg" viewBox="-10 -10 220 115" xmlns="http://www.w3.org/2000/svg" aria-label="Aether">
+      <defs>
+        <linearGradient id="aetherGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#e0607e"/>
+          <stop offset="45%" stop-color="#f7c948"/>
+          <stop offset="100%" stop-color="#7eb8f7"/>
+        </linearGradient>
+        <filter id="aetherGlow" x="-30%" y="-50%" width="160%" height="200%">
+          <feGaussianBlur stdDeviation="2.5" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <polygon class="inf-diamond" points="100,-9 107,-2 100,5 93,-2"/>
+      <path class="inf-base" fill="none" stroke-linecap="round"
+            d="M 100,50 C 130,15 175,15 175,50 C 175,85 130,85 100,50 C 70,15 25,15 25,50 C 25,85 70,85 100,50 Z"/>
+      <path class="inf-mid" fill="none" stroke-linecap="round"
+            d="M 100,50 C 128,20 172,20 172,50 C 172,80 128,80 100,50 C 72,20 28,20 28,50 C 28,80 72,80 100,50 Z"/>
+      <path class="inf-flow" pathLength="1" fill="none" stroke-linecap="round"
+            d="M 100,50 C 130,15 175,15 175,50 C 175,85 130,85 100,50 C 70,15 25,15 25,50 C 25,85 70,85 100,50 Z"/>
+    </svg>
+  </div>
+  <div class="hero-eyebrow">House of Museion · Sealed April 2026</div>
+  <h1 class="hero-title"><span class="gradient">What we are building</span></h1>
+  <p class="hero-subtitle">A sovereign-AI-first holding company. Eight brand packs, six strategic pillars, one parent. The product is the Athenaeum — Microsoft 365 for sovereign creators. The intelligence surface is MINT — typed, stake-backed claims with KAIZE forensics as the founding application. The order is the Gentlemen of Muse. The work is to keep getting better.</p>
+  <div class="hero-divider"></div>
+  <div class="kaizen-mark">改善</div>
+</header>
+
+<!-- ─── §  THE HOUSE  ─────────────────────────────────────────── -->
+<section id="house">
+  <div class="section-label">The House</div>
+  <h2 class="section-intro"><span class="accent">Museion Holdings</span> is the legal name. <span class="accent-pink">House of Museion</span> is the ceremonial one. Both are correct.</h2>
+
+  <div class="section-prose">
+    <p><strong>Museion Holdings</strong> (Limited) is the corporate parent — the entity that holds the IP, the equity, the cap table, the contracts, the relationships with banks and counsel and investors. It's the name on the paperwork.</p>
+
+    <p><strong>House of Museion</strong> is the brand above the brands — the ceremonial layer that the Athenaeum suite, the Gentlemen of Muse, the scrolls, and every storytelling moment carry. It's the name on the seal.</p>
+
+    <p>Underneath sit four operating opcos (<strong>YAKK Studios</strong>, <strong>Museion Labs</strong>, <strong>KAIZE Labs</strong>, <strong>MINT Foundation</strong>), one community order (<strong>Gentlemen of Muse</strong>), one chain venue (<strong>$MUSE</strong> on Ethereum L2 → eventual MUSE L1), and a small family hospitality wing (<strong>Johnny Boy's Wines</strong> · <strong>Ali's of Aberdeen</strong>) carried forward from Jay's grandparents.</p>
+
+    <p>The thread that runs through it: <em>build something honest, remember what matters, never let it get owned by a single interest</em>. 改善 — the work is to keep getting better.</p>
+  </div>
+</section>
+
+<!-- ─── §  THE BRAND HOUSE  ───────────────────────────────────── -->
+<section id="brand-house">
+  <div class="section-label">The Brand House · Eight Packs</div>
+
+  <div class="house-note">
+    <div class="house-note-label">✦ From the House</div>
+    <div class="house-note-body">Each pack is a brand on the family tree — its mark, its palette, its voice, its place in the diagram. The first six are the digital verticals. The last two — Pack 07 and Pack 08 — are the family wing, in honour of Grandad John and in loving memory of Grandma Ali. <em>Detailed pack pages are forthcoming.</em></div>
+  </div>
+
+  <div class="brand-grid">
+
+    <a class="brand-card" href="#" style="--card-accent: #e0607e; --card-accent-2: #f7c948;">
+      <div class="brand-card-num">Pack 01</div>
+      <div class="brand-card-mini"><span>∞</span></div>
+      <div class="brand-card-name">Museion</div>
+      <div class="brand-card-role">The parent · sovereign workspace · the workshop</div>
+    </a>
+
+    <a class="brand-card" href="#" style="--card-accent: #c2185b; --card-accent-2: #ad8520;">
+      <div class="brand-card-num">Pack 02</div>
+      <div class="brand-card-mini"><span>V</span></div>
+      <div class="brand-card-name">Veritas</div>
+      <div class="brand-card-role">Network of Truth · KAIZE forensic intelligence</div>
+    </a>
+
+    <a class="brand-card" href="#" style="--card-accent: #7a4628; --card-accent-2: #c89058;">
+      <div class="brand-card-num">Pack 03</div>
+      <div class="brand-card-mini"><span>G</span></div>
+      <div class="brand-card-name">Gentlemen of Muse</div>
+      <div class="brand-card-role">The Order · 13-seat governance · stewardship</div>
+    </a>
+
+    <a class="brand-card" href="#" style="--card-accent: #a8702a; --card-accent-2: #a8243a;">
+      <div class="brand-card-num">Pack 04</div>
+      <div class="brand-card-mini"><span>M</span></div>
+      <div class="brand-card-name">Muse Layer 2</div>
+      <div class="brand-card-role">The chain · $MUSE settlement venue · L2 → L1</div>
+    </a>
+
+    <a class="brand-card" href="#" style="--card-accent: #5a3aa0; --card-accent-2: #d4a818;">
+      <div class="brand-card-num">Pack 05</div>
+      <div class="brand-card-mini"><span>Ⅴ</span></div>
+      <div class="brand-card-name">Veritas (Geometric)</div>
+      <div class="brand-card-role">MINT attestation network · forensic-grade claims</div>
+    </a>
+
+    <a class="brand-card" href="#" style="--card-accent: #e0607e; --card-accent-2: #f7c948;">
+      <div class="brand-card-num">Pack 06</div>
+      <div class="brand-card-mini"><span>Y</span></div>
+      <div class="brand-card-name">YAKK Studios</div>
+      <div class="brand-card-role">The creative house · silent-video pipeline</div>
+    </a>
+
+    <a class="brand-card" href="#" style="--card-accent: #6b1a2a; --card-accent-2: #9a7a30;">
+      <div class="brand-card-num">Pack 07</div>
+      <div class="brand-card-mini"><span>🍷</span></div>
+      <div class="brand-card-name">Johnny Boy's Wines</div>
+      <div class="brand-card-role">Family wing · in honour of Grandad John Watt</div>
+    </a>
+
+    <a class="brand-card" href="#" style="--card-accent: #9a7a30; --card-accent-2: #7da7c4;">
+      <div class="brand-card-num">Pack 08</div>
+      <div class="brand-card-mini"><span>A</span></div>
+      <div class="brand-card-name">Ali's of Aberdeen</div>
+      <div class="brand-card-role">Family wing · the bar in Portugal · in memory of Grandma Ali</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ─── §  THE SCROLLS  ───────────────────────────────────────── -->
+<section id="scrolls">
+  <div class="house-note">
+    <div class="house-note-label">✦ From the House</div>
+    <div class="house-note-body">The Scrolls are the philosophy notes — the <em>why</em>. Read them in any order. The deeper implementation scrolls stay in the private archive. The Muse rewards those who served her before she was famous.</div>
+  </div>
+
+  <div class="section-label">The Scrolls</div>
+
+  <div class="scroll-list">
+
+    <a class="scroll-entry" href="/scrolls/scroll-001.html">
+      <div class="entry-num">001</div>
+      <div class="entry-body">
+        <div class="entry-title">The Personal Aether Protocol</div>
+        <div class="entry-desc">One loyal companion. Infinite specialist depth. The AI relationship that was always missing — until now.</div>
+      </div>
+      <span class="entry-badge">Read</span>
+    </a>
+
+    <a class="scroll-entry" href="/scrolls/scroll-002.html">
+      <div class="entry-num">002</div>
+      <div class="entry-body">
+        <div class="entry-title">Sovereign AI Defense</div>
+        <div class="entry-desc">How Aether stays loyal when every other AI system has been captured, compromised, or quietly turned against the person it claims to serve.</div>
+      </div>
+      <span class="entry-badge">Read</span>
+    </a>
+
+    <a class="scroll-entry" href="/scrolls/scroll-004.html">
+      <div class="entry-num">003</div>
+      <div class="entry-body">
+        <div class="entry-title">Aether: The Loyal Intelligence</div>
+        <div class="entry-desc">Not a general-purpose AI. Not a commercial chatbot. A purpose-built intelligence designed from the ground up for one role — to be the most trustworthy AI companion in existence.</div>
+      </div>
+      <span class="entry-badge">Read</span>
+    </a>
+
+    <a class="scroll-entry" href="/scrolls/scroll-013.html">
+      <div class="entry-num">004</div>
+      <div class="entry-body">
+        <div class="entry-title">Memory as Moat</div>
+        <div class="entry-desc">A chatbot that forgets you every session is a commodity. A guardian that remembers is a relationship. Memory is the moat.</div>
+      </div>
+      <span class="entry-badge">Read</span>
+    </a>
+
+    <a class="scroll-entry" href="/scrolls/scroll-016.html">
+      <div class="entry-num">005</div>
+      <div class="entry-body">
+        <div class="entry-title">The Non-Greedy Covenant</div>
+        <div class="entry-desc">Trust is expensive. The cheapest way to earn it is to commit, publicly and in code, to the things you will not do — and to make the refusals harder to remove than to implement.</div>
+      </div>
+      <span class="entry-badge">Read</span>
+    </a>
+
+  </div>
+
+  <div style="margin-top: 1.5rem;">
+    <a class="section-cta" href="/scrolls/">Open the full Gentlemen's Playbook</a>
+  </div>
+</section>
+
+<!-- ─── §  THE FAMILY WING  ───────────────────────────────────── -->
+<section id="family">
+  <div class="section-label">The Family Wing</div>
+  <h2 class="section-intro">The smallest commercial weight. The <span class="accent">largest emotional weight.</span> Both are correct.</h2>
+
+  <div class="section-prose">
+    <p>Every brand, every product, every line of code in this archive is shaped by a single underlying intent — <em>to retire Mum</em>. The legal entities, the token plan, the council, the Athenaeum suite — these are the form the work has had to take. The function is straightforward. The family wing makes that thread explicit at the brand layer.</p>
+  </div>
+
+  <div class="family-grid">
+
+    <div class="family-card">
+      <div class="family-card-pack">Pack 07</div>
+      <div class="family-card-name">Johnny Boy's Wines</div>
+      <div class="family-card-tag">A wine merchant who knew you when you were small.</div>
+      <div class="family-card-body">In honour of <strong>John Watt</strong>. Curated cellar, members' shipments, the handwritten tasting note. The visual lock-up is the gold-bordered medallion lifted from the framed <em>A Life in Wine</em> memorial scroll.</div>
+    </div>
+
+    <div class="family-card alis">
+      <div class="family-card-pack">Pack 08</div>
+      <div class="family-card-name">Ali's of Aberdeen</div>
+      <div class="family-card-tag">Aberdeen warmth · Portuguese light.</div>
+      <div class="family-card-body">In loving memory of <strong>Alison Watt</strong>, named for the granite city she was from. Set in <strong>Portugal</strong> — Mum's loved place — and held by Mum's direction. The framed John Watt memorial scroll hangs centre-position behind the bar.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── §  THE ORDER  ─────────────────────────────────────────── -->
+<section id="order">
+  <div class="section-label">The Order</div>
+  <h2 class="section-intro">The <span class="accent">Gentlemen of Muse</span> are the human governance layer. Reputation-weighted, not capital-weighted.</h2>
+
+  <div class="section-prose">
+    <p>Thirteen founding seats. A bond posted per seat. A constitution of seven non-negotiable codes — <em>truth before tribe</em>, hands clean of insider trades, no secret entanglements, confront in private and align in public. The order adjudicates MINT disputes, holds a 1.5× governance weight on Museion proposals, and stewards the cultural integrity of the whole house.</p>
+    <p>Membership is earned, not bought. The seat is not for sale.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-text">
+    Museion · House of Museion<br />
+    A Museion Holdings company · April 2026<br />
+    For the Gentlemen of Muse
+  </div>
+  <div class="footer-brand">Æther<span class="kaizen-foot">改善</span></div>
+</footer>
+
+</body>
+</html>
