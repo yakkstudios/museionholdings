@@ -1,0 +1,22 @@
+# macOS / Windows / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Vercel
+.vercel/
+
+# Defensive — no Node project here, but in case Vercel ever adds it
+node_modules/
+.next/
+
+# Env / secrets
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*

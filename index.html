@@ -139,6 +139,13 @@
   @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.025); } }
 
   /* ── HERO ───────────────────────────────────────────────────── */
+  .hero-logo {
+    width: 220px; height: auto; max-width: 60vw;
+    margin: 0 auto 2rem;
+    display: block;
+    opacity: 0;
+    animation: emblemIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both;
+  }
   .hero {
     max-width: 800px; margin: 0 auto;
     padding: 110px 2rem 70px;
@@ -263,18 +270,15 @@
   }
   .brand-card-mini {
     width: 100%; aspect-ratio: 1 / 1; border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    color: rgba(255,255,255,0.95); font-family: var(--font-head);
-    font-size: 1.6rem; font-weight: 800; letter-spacing: -0.04em;
-    position: relative; overflow: hidden;
-    background-image: linear-gradient(135deg, var(--card-accent, var(--pink)) 0%, var(--card-accent-2, var(--gold)) 100%);
-    text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+    overflow: hidden; position: relative;
+    background: var(--surface-3);
+    border: 1px solid var(--border-soft);
   }
-  .brand-card-mini::before {
-    content: ''; position: absolute; inset: 4px; border-radius: 6px;
-    background: rgba(0,0,0,0.18); pointer-events: none;
+  .brand-card-mini img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
   }
-  .brand-card-mini span { position: relative; z-index: 1; }
   .brand-card-name {
     font-family: var(--font-head); font-size: 0.9375rem;
     font-weight: 600; color: var(--text); line-height: 1.2;
@@ -384,7 +388,7 @@
     footer { padding: 2rem 1.25rem; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .hero-emblem, .inf-flow, .inf-diamond { animation: none !important; }
+    .hero-logo { animation: none !important; }
     html { scroll-behavior: auto; }
   }
 </style>
@@ -393,16 +397,7 @@
 
 <nav>
   <a class="nav-brand" href="/">
-    <svg class="nav-inf" viewBox="-10 -10 220 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#e0607e"/><stop offset="50%" stop-color="#f7c948"/><stop offset="100%" stop-color="#7eb8f7"/>
-        </linearGradient>
-      </defs>
-      <path fill="none" stroke="url(#navGrad)" stroke-width="4" stroke-linecap="round"
-        d="M 100,50 C 130,15 175,15 175,50 C 175,85 130,85 100,50 C 70,15 25,15 25,50 C 25,85 70,85 100,50 Z"/>
-    </svg>
-    Æ<span class="accent">ther</span> · Museion
+Æ<span class="accent">ther</span> · Museion
   </a>
   <div class="nav-right">
     <a class="nav-link" href="#house">House</a>
@@ -413,28 +408,7 @@
 </nav>
 
 <header class="hero">
-  <div class="hero-emblem">
-    <svg class="inf-svg" viewBox="-10 -10 220 115" xmlns="http://www.w3.org/2000/svg" aria-label="Aether">
-      <defs>
-        <linearGradient id="aetherGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#e0607e"/>
-          <stop offset="45%" stop-color="#f7c948"/>
-          <stop offset="100%" stop-color="#7eb8f7"/>
-        </linearGradient>
-        <filter id="aetherGlow" x="-30%" y="-50%" width="160%" height="200%">
-          <feGaussianBlur stdDeviation="2.5" result="b"/>
-          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-      <polygon class="inf-diamond" points="100,-9 107,-2 100,5 93,-2"/>
-      <path class="inf-base" fill="none" stroke-linecap="round"
-            d="M 100,50 C 130,15 175,15 175,50 C 175,85 130,85 100,50 C 70,15 25,15 25,50 C 25,85 70,85 100,50 Z"/>
-      <path class="inf-mid" fill="none" stroke-linecap="round"
-            d="M 100,50 C 128,20 172,20 172,50 C 172,80 128,80 100,50 C 72,20 28,20 28,50 C 28,80 72,80 100,50 Z"/>
-      <path class="inf-flow" pathLength="1" fill="none" stroke-linecap="round"
-            d="M 100,50 C 130,15 175,15 175,50 C 175,85 130,85 100,50 C 70,15 25,15 25,50 C 25,85 70,85 100,50 Z"/>
-    </svg>
-  </div>
+  <img class="hero-logo" src="/museion-logo.png" alt="Museion" />
   <div class="hero-eyebrow">House of Museion · Sealed April 2026</div>
   <h1 class="hero-title"><span class="gradient">What we are building</span></h1>
   <p class="hero-subtitle">A sovereign-AI-first holding company. Eight brand packs, six strategic pillars, one parent. The product is the Athenaeum — Microsoft 365 for sovereign creators. The intelligence surface is MINT — typed, stake-backed claims with KAIZE forensics as the founding application. The order is the Gentlemen of Muse. The work is to keep getting better.</p>
@@ -471,56 +445,56 @@
 
     <a class="brand-card" href="#" style="--card-accent: #e0607e; --card-accent-2: #f7c948;">
       <div class="brand-card-num">Pack 01</div>
-      <div class="brand-card-mini"><span>∞</span></div>
+      <div class="brand-card-mini"><img src="/img/brand-house/01-museion.png" alt="Museion brand mark" loading="lazy"/></div>
       <div class="brand-card-name">Museion</div>
       <div class="brand-card-role">The parent · sovereign workspace · the workshop</div>
     </a>
 
     <a class="brand-card" href="#" style="--card-accent: #c2185b; --card-accent-2: #ad8520;">
       <div class="brand-card-num">Pack 02</div>
-      <div class="brand-card-mini"><span>V</span></div>
+      <div class="brand-card-mini"><img src="/img/brand-house/02-veritas.jpg" alt="Veritas Network of Truth seal" loading="lazy"/></div>
       <div class="brand-card-name">Veritas</div>
       <div class="brand-card-role">Network of Truth · KAIZE forensic intelligence</div>
     </a>
 
     <a class="brand-card" href="#" style="--card-accent: #7a4628; --card-accent-2: #c89058;">
       <div class="brand-card-num">Pack 03</div>
-      <div class="brand-card-mini"><span>G</span></div>
+      <div class="brand-card-mini"><img src="/img/brand-house/03-gentlemen.png" alt="Gentlemen of Muse crest" loading="lazy"/></div>
       <div class="brand-card-name">Gentlemen of Muse</div>
       <div class="brand-card-role">The Order · 13-seat governance · stewardship</div>
     </a>
 
     <a class="brand-card" href="#" style="--card-accent: #a8702a; --card-accent-2: #a8243a;">
       <div class="brand-card-num">Pack 04</div>
-      <div class="brand-card-mini"><span>M</span></div>
+      <div class="brand-card-mini"><img src="/img/brand-house/04-muse-l2.jpg" alt="Muse Layer 2 mark" loading="lazy"/></div>
       <div class="brand-card-name">Muse Layer 2</div>
       <div class="brand-card-role">The chain · $MUSE settlement venue · L2 → L1</div>
     </a>
 
     <a class="brand-card" href="#" style="--card-accent: #5a3aa0; --card-accent-2: #d4a818;">
       <div class="brand-card-num">Pack 05</div>
-      <div class="brand-card-mini"><span>Ⅴ</span></div>
+      <div class="brand-card-mini"><img src="/img/brand-house/05-veritas-geometric.jpg" alt="Veritas geometric V" loading="lazy"/></div>
       <div class="brand-card-name">Veritas (Geometric)</div>
       <div class="brand-card-role">MINT attestation network · forensic-grade claims</div>
     </a>
 
     <a class="brand-card" href="#" style="--card-accent: #e0607e; --card-accent-2: #f7c948;">
       <div class="brand-card-num">Pack 06</div>
-      <div class="brand-card-mini"><span>Y</span></div>
+      <div class="brand-card-mini"><img src="/img/brand-house/06-yakk.png" alt="YAKK Studios mark" loading="lazy"/></div>
       <div class="brand-card-name">YAKK Studios</div>
       <div class="brand-card-role">The creative house · silent-video pipeline</div>
     </a>
 
     <a class="brand-card" href="#" style="--card-accent: #6b1a2a; --card-accent-2: #9a7a30;">
       <div class="brand-card-num">Pack 07</div>
-      <div class="brand-card-mini"><span>🍷</span></div>
+      <div class="brand-card-mini"><img src="/img/brand-house/07-johnny-boys.jpg" alt="Johnny Boy's Wines label" loading="lazy"/></div>
       <div class="brand-card-name">Johnny Boy's Wines</div>
       <div class="brand-card-role">Family wing · in honour of Grandad John Watt</div>
     </a>
 
     <a class="brand-card" href="#" style="--card-accent: #9a7a30; --card-accent-2: #7da7c4;">
       <div class="brand-card-num">Pack 08</div>
-      <div class="brand-card-mini"><span>A</span></div>
+      <div class="brand-card-mini"><img src="/img/brand-house/08-alis-of-aberdeen.png" alt="Ali's of Aberdeen mark" loading="lazy"/></div>
       <div class="brand-card-name">Ali's of Aberdeen</div>
       <div class="brand-card-role">Family wing · the bar in Portugal · in memory of Grandma Ali</div>
     </a>
