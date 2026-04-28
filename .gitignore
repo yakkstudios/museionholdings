@@ -20,3 +20,7 @@ node_modules/
 *.log
 npm-debug.log*
 yarn-debug.log*
+
+# Dev push artefacts (one-shot scripts + their logs)
+_*.bat
+_*log.txt
