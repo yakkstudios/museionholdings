@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Museion Holdings — House of Museion</title>
-<meta name="description" content="Museion Holdings — a sovereign-AI-first holding company. The brand house. The product. The order. Eight packs, six pillars, one parent." />
-<meta name="robots" content="noindex, nofollow" />
+<meta name="description" content="Museion Holdings — a sovereign-AI-first holding company building the Athenaeum, MINT, and the $MUSE network. Eight brand packs, six strategic pillars, one parent. House of Museion." />
+<meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#050509" />
 <link rel="canonical" href="https://museionholdings.xyz/" />
 
@@ -354,6 +354,69 @@
     font-size: 0.875rem; color: var(--text-3); line-height: 1.6;
   }
 
+  
+  /* ── INVESTOR GRID + CONTACT ────────────────────────────────── */
+  .invest-grid {
+    display: grid; grid-template-columns: 1fr; gap: 0.75rem;
+    margin: 1.25rem 0 2rem;
+  }
+  @media (min-width: 720px) { .invest-grid { grid-template-columns: 1fr 1fr; } }
+  .invest-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.25rem 1.5rem;
+  }
+  .invest-card-label {
+    font-family: var(--font-mono); font-size: 0.625rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.5rem;
+  }
+  .invest-card-value {
+    font-family: var(--font-head); font-size: 1.4rem; font-weight: 700;
+    color: var(--text); letter-spacing: -0.02em; line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+  .invest-card-body { font-size: 0.875rem; color: var(--text-3); line-height: 1.55; }
+
+  .invest-cta-row {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem;
+  }
+  .section-cta.secondary {
+    color: var(--text-2);
+    border-color: var(--border);
+    background: transparent;
+  }
+  .section-cta.secondary:hover {
+    background: var(--surface-2);
+    border-color: var(--border-soft);
+    color: var(--text);
+  }
+
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr; gap: 0.75rem;
+    margin: 1.25rem 0;
+  }
+  @media (min-width: 720px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
+  .contact-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.1rem 1.4rem;
+    text-decoration: none; color: inherit;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .contact-card:hover {
+    background: var(--surface-2); border-color: rgba(247,201,72,0.3);
+    transform: translateY(-1px);
+  }
+  .contact-label {
+    font-family: var(--font-mono); font-size: 0.625rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--pink); margin-bottom: 0.4rem;
+  }
+  .contact-email {
+    font-family: var(--font-head); font-size: 1rem; font-weight: 600;
+    color: var(--text); margin-bottom: 0.3rem; word-break: break-all;
+  }
+  .contact-hint { font-size: 0.8125rem; color: var(--text-3); line-height: 1.5; }
+
   /* ── FOOTER ─────────────────────────────────────────────────── */
   footer {
     border-top: 1px solid var(--border); padding: 2rem;
@@ -402,7 +465,8 @@
   <div class="nav-right">
     <a class="nav-link" href="#house">House</a>
     <a class="nav-link" href="/scrolls/">Scrolls</a>
-    <a class="nav-link" href="#family">Family</a>
+    <a class="nav-link" href="#investors">Invest</a>
+    <a class="nav-link" href="#contact">Contact</a>
     <span class="nav-badge">House of Museion</span>
   </div>
 </nav>
@@ -593,6 +657,96 @@
   </div>
 </section>
 
+<!-- ─── §  FOR INVESTORS  ─────────────────────────────────────── -->
+<section id="investors">
+  <div class="section-label">For Investors · Pre-seed</div>
+  <h2 class="section-intro">Operator-funded, family-committed, <span class="accent">open to first institutional cheque.</span></h2>
+
+  <div class="section-prose">
+    <p>Museion Holdings is in <strong>pre-seed</strong>. The product is real (Aether v0.2 shipped 2026-04-26), the brand house is sealed (eight packs, six strategic pillars), the legal scaffolding is drafted (UK opcos + Cayman foundation for token issuance), and the runway has been carried by founder capital. Now we are open to a small, aligned institutional round.</p>
+  </div>
+
+  <div class="invest-grid">
+    <div class="invest-card">
+      <div class="invest-card-label">The Ask</div>
+      <div class="invest-card-value">£750k–£1M</div>
+      <div class="invest-card-body">12-month runway through $MUSE TGE. Open to syndicate of aligned operators — no growth-tier funds chasing yield.</div>
+    </div>
+
+    <div class="invest-card">
+      <div class="invest-card-label">Use of Funds</div>
+      <div class="invest-card-value">Audit · Counsel · Hires</div>
+      <div class="invest-card-body">Cantina audit on TruthStake.sol + $MUSE token · UK + Cayman token counsel · 2–3 hires for Athenaeum suite (Stylus / Tabula / Pantheon panels) · ops + treasury setup.</div>
+    </div>
+
+    <div class="invest-card">
+      <div class="invest-card-label">Cap Table (Initial)</div>
+      <div class="invest-card-value">65 / 20 / 10 / 5</div>
+      <div class="invest-card-body">Founder 65% · Core 4 reserve 20% (3y vest) · option pool 10% · strategic reserve 5%. Token side held separately via MINT Foundation (Cayman). Real numbers refined with corporate counsel pre-close.</div>
+    </div>
+
+    <div class="invest-card">
+      <div class="invest-card-label">$MUSE Token</div>
+      <div class="invest-card-value">1B fixed · ERC-20Votes</div>
+      <div class="invest-card-body">On Base for v1, eventual MUSE L1 migration. 25% liquid at TGE via LBP. 18% team (1y cliff + 3y linear). Audit-gated, multi-sig treasury (5-of-7 Safe), Snapshot-then-Bravo governance.</div>
+    </div>
+
+    <div class="invest-card">
+      <div class="invest-card-label">Y1 Revenue Target</div>
+      <div class="invest-card-value">~£255k</div>
+      <div class="invest-card-body">YAKK Studios brand-system engagements + Silent Cuts subscriptions + KAIZE-adjacent intelligence content. Diversified, services-first, not 100% reliant on token-side success.</div>
+    </div>
+
+    <div class="invest-card">
+      <div class="invest-card-label">Shipped to Date</div>
+      <div class="invest-card-value">v0.2 · 8 packs · live</div>
+      <div class="invest-card-body">Aether dev console v0.2 · all 8 brand packs sealed · master plan v1.0 · five published philosophy scrolls · this site live on the legal-entity domain.</div>
+    </div>
+  </div>
+
+  <div class="invest-cta-row">
+    <a class="section-cta" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Investor%20Enquiry">Request the master plan</a>
+    <a class="section-cta secondary" href="#contact">Get in touch</a>
+  </div>
+</section>
+
+<!-- ─── §  GET IN TOUCH  ──────────────────────────────────────── -->
+<section id="contact">
+  <div class="section-label">Get in Touch</div>
+  <h2 class="section-intro">One mailbox, one human, one reply within <span class="accent">two working days.</span></h2>
+
+  <div class="section-prose">
+    <p>Museion Holdings is small, deliberate, and direct. There is no PR firm. There is no inbox-zero theatre. If you write — for an investor conversation, a partnership, a press question, or just to ask what we're up to — Jay will read it, and you'll get an actual reply.</p>
+  </div>
+
+  <div class="contact-grid">
+    <a class="contact-card" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Investor%20Enquiry">
+      <div class="contact-label">Investors</div>
+      <div class="contact-email">jay@museionholdings.xyz</div>
+      <div class="contact-hint">Pre-seed conversations · master plan · cap table</div>
+    </a>
+    <a class="contact-card" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Partnership">
+      <div class="contact-label">Partnerships</div>
+      <div class="contact-email">jay@museionholdings.xyz</div>
+      <div class="contact-hint">Co-build · integration · YAKK creative engagements</div>
+    </a>
+    <a class="contact-card" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Press">
+      <div class="contact-label">Press</div>
+      <div class="contact-email">jay@museionholdings.xyz</div>
+      <div class="contact-hint">Quotes · briefings · KAIZE forensic intelligence</div>
+    </a>
+    <a class="contact-card" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Hello">
+      <div class="contact-label">Anyone Else</div>
+      <div class="contact-email">jay@museionholdings.xyz</div>
+      <div class="contact-hint">Curious · introductions · the work itself</div>
+    </a>
+  </div>
+
+  <div class="section-prose" style="margin-top: 2rem;">
+    <p style="font-size: 0.875rem; color: var(--text-4);"><em>The mailbox is single-routed for now — one inbox, one founder. As the team grows, the routing splits across the canonical addresses (investors@, partnerships@, press@). Until then: jay@ catches everything, replies sit on the same desk, and you don't get bounced through assistants.</em></p>
+  </div>
+</section>
+
 <!-- ─── §  THE ORDER  ─────────────────────────────────────────── -->
 <section id="order">
   <div class="section-label">The Order</div>
@@ -608,7 +762,8 @@
   <div class="footer-text">
     Museion · House of Museion<br />
     A Museion Holdings company · April 2026<br />
-    For the Gentlemen of Muse
+    For the Gentlemen of Muse<br />
+    <span style="opacity:0.7;">© 2026 Museion Holdings Limited · all rights reserved</span>
   </div>
   <div class="footer-brand">Æther<span class="kaizen-foot">改善</span></div>
 </footer>
