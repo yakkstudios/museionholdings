@@ -50,6 +50,8 @@
     --gold: #f7c948;
     --gold-dim: rgba(247,201,72,0.10);
     --blue: #7eb8f7;
+    --purple: #a565ce;
+    --purple-deep: #8a4cb8;
     --wine: #c83d54;
     --rose: #d8869c;
     --azulejo: #7da7c4;
@@ -89,11 +91,11 @@
   .nav-brand {
     font-family: var(--font-head);
     font-size: 0.9375rem; font-weight: 700;
-    letter-spacing: 0.12em; text-transform: uppercase;
+    letter-spacing: 0.04em; text-transform: uppercase;
     color: var(--text); text-decoration: none;
     display: flex; align-items: center; gap: 0.6rem;
   }
-  .nav-brand .accent { background: linear-gradient(90deg,var(--pink),var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .nav-brand .accent { background: linear-gradient(90deg,var(--pink),var(--gold),var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
   .nav-brand .nav-inf { width: 22px; height: 14px; opacity: 0.9; }
   .nav-right { display: flex; align-items: center; gap: 1.5rem; }
   .nav-link {
@@ -166,7 +168,7 @@
     opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.3s both;
   }
   .hero-title .gradient {
-    background: linear-gradient(135deg, var(--pink), var(--gold), var(--blue));
+    background: linear-gradient(135deg, var(--pink), var(--gold), var(--purple));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   }
   .hero-subtitle {
@@ -767,6 +769,3 @@
   </div>
   <div class="footer-brand">Æther<span class="kaizen-foot">改善</span></div>
 </footer>
-
-</body>
-</html>
