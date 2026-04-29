@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Museion Holdings — House of Museion</title>
-<meta name="description" content="Museion Holdings — a sovereign-AI-first holding company building the Athenaeum, Veritas Network of Truth, and the $MUSE chain. Eight brand packs, six strategic pillars, one parent. House of Museion." />
+<meta name="description" content="Museion Holdings — a sovereign-AI-first holding company. Three pillars: Intelligence (Athenaeum), Truth (Veritas Network of Truth), Legacy (House of Museion). Eight brand packs, one parent, the work built to outlast the founder." />
 <meta name="robots" content="index, follow" />
-<meta name="theme-color" content="#050509" />
+<meta name="theme-color" content="#f5ecd8" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#050509" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="https://museionholdings.xyz/" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Museion Holdings" />
 <meta property="og:title" content="Museion Holdings — House of Museion" />
-<meta property="og:description" content="A sovereign-AI-first holding company. Eight brand packs, six strategic pillars, one parent. House of Museion." />
+<meta property="og:description" content="A sovereign-AI-first holding company. Intelligence · Truth · Legacy. House of Museion." />
 <meta property="og:image" content="https://museionholdings.xyz/museion-og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,7 +22,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Museion Holdings — House of Museion" />
-<meta name="twitter:description" content="A sovereign-AI-first holding company. House of Museion." />
+<meta name="twitter:description" content="A sovereign-AI-first holding company. Intelligence · Truth · Legacy." />
 <meta name="twitter:image" content="https://museionholdings.xyz/museion-og.png" />
 
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -31,430 +32,648 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ── LIGHT MODE (DEFAULT — Parchment Annual-Report Register) ────── */
   :root {
-    --void: #050509;
-    --surface: #0d0d14;
-    --surface-2: #14141f;
-    --surface-3: #1c1c2a;
-    --border: rgba(255,255,255,0.07);
-    --border-soft: rgba(255,255,255,0.04);
-    --text: #f5f5f7;
-    --text-2: rgba(245,245,247,0.68);
-    --text-3: rgba(245,245,247,0.40);
-    --text-4: rgba(245,245,247,0.22);
-    --pink: #e0607e;
-    --pink-dim: rgba(224,96,126,0.12);
-    --gold: #f7c948;
-    --gold-dim: rgba(247,201,72,0.10);
-    --blue: #7eb8f7;
-    --purple: #a565ce;
-    --purple-deep: #8a4cb8;
-    --wine: #c83d54;
-    --rose: #d8869c;
-    --azulejo: #7da7c4;
-    --font-body: 'DM Sans', sans-serif;
-    --font-head: 'Syne', sans-serif;
-    --font-mono: 'Space Mono', monospace;
-    --font-jp:   'Noto Sans JP', 'Syne', sans-serif;
+    --surface:        #f5ecd8;
+    --surface-2:      #ece1c5;
+    --surface-3:      #f7eedd;
+    --surface-4:      #ead9b8;
+    --ink-1:          #1a140d;
+    --ink-2:          #2b2218;
+    --text-1:         #1a140d;
+    --text-2:         #4a3d2c;
+    --text-3:         #6b5c47;
+    --text-4:         #8c7d66;
+    --line:           rgba(26,20,13,0.12);
+    --line-strong:    rgba(26,20,13,0.24);
+    --line-soft:      rgba(26,20,13,0.06);
+    --accent:         #9a7a30;     /* antique gold */
+    --accent-2:       #6b1a2a;     /* wine */
+    --accent-3:       #d62888;     /* museion pink */
+    --accent-4:       #a565ce;     /* purple */
+    --gold-light:     #d8b558;
+    --azulejo:        #7da7c4;
+    --rose:           #d8869c;
+
+    --f-serif:        'Cormorant Garamond', Georgia, "Times New Roman", serif;
+    --f-sans:         'Inter', system-ui, -apple-system, "Segoe UI", sans-serif;
+    --f-mono:         'Space Mono', ui-monospace, "SF Mono", monospace;
+    --f-jp:           'Noto Sans JP', 'Cormorant Garamond', sans-serif;
   }
-  html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+
+  /* ── DARK MODE (Void Sovereign-Tech Register) ───────────────────── */
+  :root[data-theme="dark"] {
+    --surface:        #050509;
+    --surface-2:      #0d0d14;
+    --surface-3:      #14141f;
+    --surface-4:      #1c1c2a;
+    --ink-1:          #f5f5f7;
+    --ink-2:          #d8d8e0;
+    --text-1:         #f5f5f7;
+    --text-2:         rgba(245,245,247,0.78);
+    --text-3:         rgba(245,245,247,0.55);
+    --text-4:         rgba(245,245,247,0.32);
+    --line:           rgba(255,255,255,0.10);
+    --line-strong:    rgba(255,255,255,0.24);
+    --line-soft:      rgba(255,255,255,0.05);
+    --accent:         #f7c948;     /* gold */
+    --accent-2:       #c83d54;     /* bright wine */
+    --accent-3:       #e0607e;     /* pink */
+    --accent-4:       #b070d8;     /* purple */
+    --gold-light:     #ffd590;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
   body {
-    background: var(--void); color: var(--text);
-    font-family: var(--font-body); line-height: 1.65;
-    min-height: 100vh; overflow-x: hidden;
+    background: var(--surface); color: var(--text-1);
+    font-family: var(--f-sans);
+    font-feature-settings: 'tnum';
+    line-height: 1.7; min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
   }
   body::before {
-    content: ''; position: fixed; top: -15%; left: 50%;
-    transform: translateX(-50%);
-    width: 1000px; height: 600px;
-    background: radial-gradient(ellipse,
-      rgba(224,96,126,0.05) 0%,
-      rgba(247,201,72,0.03) 35%,
-      transparent 65%
-    );
-    pointer-events: none; z-index: 0;
+    content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      radial-gradient(ellipse 1100px 700px at 80% -10%, color-mix(in oklab, var(--accent) 8%, transparent), transparent 70%),
+      radial-gradient(ellipse 900px 600px at 10% 90%, color-mix(in oklab, var(--accent-2) 6%, transparent), transparent 65%);
   }
+  :root[data-theme="dark"] body::before {
+    background-image:
+      radial-gradient(ellipse 1100px 700px at 80% -10%, rgba(247,201,72,0.04), transparent 70%),
+      radial-gradient(ellipse 900px 600px at 10% 90%, rgba(224,96,126,0.06), transparent 65%);
+  }
+  body::after {
+    content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.6 0 0 0 0 0.5 0 0 0 0 0.3 0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.42; mix-blend-mode: multiply;
+  }
+  :root[data-theme="dark"] body::after { opacity: 0.20; mix-blend-mode: screen; }
 
-  /* ── NAV ────────────────────────────────────────────────────── */
+  ::selection { background: color-mix(in oklab, var(--accent) 30%, transparent); color: var(--ink-1); }
+
+  /* ── NAV ──────────────────────────────────────────────────────── */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; height: 56px;
+    position: fixed; top: 0; left: 0; right: 0;
+    height: 64px; padding: 0 32px;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 2rem;
-    background: rgba(5,5,9,0.88);
-    backdrop-filter: blur(24px);
-    border-bottom: 1px solid var(--border);
+    background: color-mix(in oklab, var(--surface) 88%, transparent);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
     z-index: 100;
+    transition: background 0.3s ease, border-color 0.3s ease;
   }
   .nav-brand {
-    font-family: var(--font-head);
-    font-size: 0.9375rem; font-weight: 700;
-    letter-spacing: 0.04em; text-transform: uppercase;
-    color: var(--text); text-decoration: none;
-    display: flex; align-items: center; gap: 0.6rem;
+    font-family: var(--f-serif); font-size: 20px; font-weight: 600;
+    font-style: italic; letter-spacing: 0.02em;
+    color: var(--text-1); text-decoration: none;
+    display: flex; align-items: baseline; gap: 0.6em;
   }
-  .nav-brand .accent { background: linear-gradient(90deg,var(--pink),var(--gold),var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-  .nav-brand .nav-inf { width: 22px; height: 14px; opacity: 0.9; }
-  .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+  .nav-brand .ae {
+    background: linear-gradient(110deg, var(--accent-3), var(--accent), var(--accent-4));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .nav-brand .sep {
+    font-family: var(--f-mono); font-style: normal;
+    font-size: 11px; color: var(--text-4);
+    letter-spacing: 0.18em; text-transform: uppercase;
+    position: relative; top: -2px;
+  }
+  .nav-right { display: flex; align-items: center; gap: 28px; }
   .nav-link {
-    font-family: var(--font-mono); font-size: 0.6875rem;
-    letter-spacing: 0.14em; text-transform: uppercase;
+    font-family: var(--f-mono); font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--text-3); text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.2s ease;
   }
-  .nav-link:hover { color: var(--text); }
-  .nav-badge {
-    font-family: var(--font-mono); font-size: 0.625rem;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--pink); border: 1px solid rgba(224,96,126,0.3);
-    border-radius: 999px; padding: 0.25rem 0.75rem;
+  .nav-link:hover { color: var(--text-1); }
+  .theme-toggle {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 14px; border-radius: 100px;
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    font-family: var(--f-mono); font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-2); cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
   }
-  @media (max-width: 720px) {
+  .theme-toggle:hover { background: var(--surface-2); border-color: var(--accent); }
+  .theme-toggle .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 6px color-mix(in oklab, var(--accent) 60%, transparent);
+  }
+  .label-light { display: inline; }
+  .label-dark { display: none; }
+  :root[data-theme="dark"] .label-light { display: none; }
+  :root[data-theme="dark"] .label-dark { display: inline; }
+  @media (max-width: 880px) {
     .nav-link { display: none; }
+    nav { padding: 0 20px; }
   }
 
-  /* ── EMBLEM ─────────────────────────────────────────────────── */
-  .hero-emblem {
-    width: 220px; height: 128px; margin: 0 auto 2rem;
-    position: relative; opacity: 0;
-    animation: emblemIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both, breathe 7s ease-in-out 1.2s infinite;
-  }
-  @keyframes emblemIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-  .inf-svg { width: 100%; height: 100%; overflow: visible; }
-  .inf-base { stroke: rgba(245,245,247,0.12); stroke-width: 1.2; }
-  .inf-mid  { stroke: rgba(245,245,247,0.24); stroke-width: 0.9; }
-  .inf-flow {
-    stroke: url(#aetherGrad); stroke-width: 2.6;
-    stroke-dasharray: 1; stroke-dashoffset: 0;
-    filter: url(#aetherGlow);
-    animation: infFlow 6.5s linear infinite;
-  }
-  @keyframes infFlow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -2; } }
-  .inf-diamond {
-    fill: var(--gold);
-    filter: drop-shadow(0 0 8px rgba(247,201,72,0.6));
-    animation: diamondPulse 3.2s ease-in-out infinite;
-  }
-  @keyframes diamondPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
-  @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.025); } }
-
-  /* ── HERO ───────────────────────────────────────────────────── */
-  .hero-logo {
-    width: 220px; height: auto; max-width: 60vw;
-    margin: 0 auto 2rem;
-    display: block;
-    opacity: 0;
-    animation: emblemIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both;
-  }
-  .hero {
-    max-width: 800px; margin: 0 auto;
-    padding: 110px 2rem 70px;
+  /* ── LAYOUT PRIMITIVES ──────────────────────────────────────────── */
+  .container {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 32px;
     position: relative; z-index: 1;
-    text-align: center;
+  }
+  .narrow { max-width: 880px; }
+  .narrower { max-width: 700px; }
+  section {
+    padding: 120px 0;
+    position: relative; z-index: 1;
+  }
+  @media (max-width: 880px) {
+    section { padding: 80px 0; }
+    .container { padding: 0 20px; }
+  }
+
+  .section-label {
+    font-family: var(--f-mono); font-size: 11px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--text-4); margin-bottom: 28px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .section-label::before {
+    content: ''; width: 28px; height: 1px;
+    background: var(--accent);
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px; background: var(--line);
+  }
+
+  .section-title {
+    font-family: var(--f-serif); font-style: italic;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 500; letter-spacing: -0.018em; line-height: 1.05;
+    color: var(--ink-1); margin-bottom: 28px;
+  }
+  .section-title .accent { color: var(--accent); font-style: normal; font-weight: 600; }
+  .section-title .gradient {
+    background: linear-gradient(110deg, var(--accent-3), var(--accent), var(--accent-4));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    font-style: normal; font-weight: 600;
+  }
+
+  .section-prose p {
+    font-size: 17px; color: var(--text-2);
+    margin-bottom: 18px; line-height: 1.75;
+  }
+  .section-prose p strong { color: var(--text-1); font-weight: 500; }
+  .section-prose p em {
+    font-family: var(--f-serif); font-style: italic; font-weight: 500;
+    color: var(--accent-2); font-size: 1.05em;
+  }
+  :root[data-theme="dark"] .section-prose p em { color: var(--accent-3); }
+
+  .pull {
+    font-family: var(--f-serif); font-style: italic; font-weight: 500;
+    font-size: clamp(22px, 2.6vw, 30px); line-height: 1.4;
+    color: var(--ink-1);
+    border-left: 2px solid var(--accent);
+    padding: 4px 0 4px 32px;
+    margin: 32px 0 32px;
+    max-width: 720px;
+  }
+
+  /* ── HERO ──────────────────────────────────────────────────────── */
+  .hero {
+    padding: 160px 0 120px;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 80px; align-items: center;
+  }
+  @media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 56px; }
+    .hero-mark-wrap { order: -1; max-width: 380px; margin: 0 auto; }
+    .hero { padding: 130px 0 80px; }
   }
   .hero-eyebrow {
-    font-family: var(--font-mono); font-size: 0.6875rem;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--text-4); margin-bottom: 1.25rem;
-    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both;
+    font-family: var(--f-mono); font-size: 11px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--text-4); margin-bottom: 36px;
+    display: inline-flex; align-items: center; gap: 12px;
+    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.15s both;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 28px; height: 1px;
+    background: var(--accent);
   }
   .hero-title {
-    font-family: var(--font-head);
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 800; letter-spacing: -0.04em; line-height: 1;
-    margin-bottom: 0.75rem;
-    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+    font-family: var(--f-serif); font-style: italic;
+    font-size: clamp(48px, 7.2vw, 92px);
+    font-weight: 500; letter-spacing: -0.020em; line-height: 0.98;
+    color: var(--ink-1); margin-bottom: 32px;
+    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.25s both;
   }
-  .hero-title .gradient {
-    background: linear-gradient(135deg, var(--pink), var(--gold), var(--purple));
+  .hero-title .pause {
+    display: block; font-style: normal; font-weight: 600;
+    background: linear-gradient(110deg, var(--accent-3), var(--accent), var(--accent-4));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   }
-  .hero-subtitle {
-    font-size: 1.125rem; color: var(--text-3);
-    max-width: 620px; margin: 1.25rem auto 2.5rem; line-height: 1.7;
-    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both;
+  .hero-dek {
+    font-size: 19px; font-weight: 400; line-height: 1.55;
+    color: var(--text-2); max-width: 560px;
+    margin-bottom: 36px;
+    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.35s both;
+  }
+  .hero-dek strong {
+    color: var(--text-1); font-weight: 500;
   }
   .hero-divider {
-    width: 72px; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold) 30%, var(--pink) 70%, transparent);
-    margin: 0 auto 2.5rem;
+    width: 56px; height: 1px;
+    background: var(--accent);
+    margin-bottom: 36px;
+    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.40s both;
+  }
+  .hero-ctas {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    margin-bottom: 56px;
     opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.45s both;
   }
-  .kaizen-mark {
-    font-family: var(--font-jp); font-size: 1rem;
-    letter-spacing: 0.36em; color: var(--gold);
-    text-shadow: 0 0 14px rgba(247,201,72,0.3);
-    margin-top: 1rem; opacity: 0.85;
-  }
-
-  /* ── SECTION CONTAINERS ─────────────────────────────────────── */
-  section {
-    max-width: 800px; margin: 0 auto;
-    padding: 60px 2rem;
-    position: relative; z-index: 1;
-  }
-  .section-label {
-    font-family: var(--font-mono); font-size: 0.6875rem;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--text-4); margin-bottom: 1.5rem;
-    display: flex; align-items: center; gap: 0.75rem;
-  }
-  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
-  .section-intro {
-    font-family: var(--font-head); font-size: 1.625rem;
-    font-weight: 500; letter-spacing: -0.02em; line-height: 1.25;
-    color: var(--text); margin-bottom: 1.25rem;
-  }
-  .section-intro .accent { color: var(--gold); }
-  .section-intro .accent-pink { color: var(--pink); }
-
-  .section-prose p { color: var(--text-2); margin-bottom: 1rem; font-size: 0.9375rem; line-height: 1.7; }
-  .section-prose p strong { color: var(--text); font-weight: 600; }
-  .section-prose p em { color: var(--pink); font-style: italic; }
-
-  .section-cta {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    margin-top: 0.5rem;
-    font-family: var(--font-mono); font-size: 0.75rem;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--gold); text-decoration: none;
-    border: 1px solid rgba(247,201,72,0.3);
-    border-radius: 999px; padding: 0.5rem 1rem;
-    background: var(--gold-dim);
-    transition: background 0.2s, border-color 0.2s, transform 0.15s;
-  }
-  .section-cta:hover {
-    background: rgba(247,201,72,0.18);
-    border-color: rgba(247,201,72,0.5);
-    transform: translateX(2px);
-  }
-  .section-cta::after { content: '→'; }
-
-  /* ── HOUSE NOTE ─────────────────────────────────────────────── */
-  .house-note {
-    background: var(--surface); border: 1px solid var(--border);
-    border-left: 3px solid var(--gold);
-    border-radius: 12px; padding: 1.5rem 1.75rem; margin-bottom: 2.5rem;
-  }
-  .house-note-label {
-    font-family: var(--font-mono); font-size: 0.625rem;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 0.5rem;
-  }
-  .house-note-body { font-size: 0.9375rem; color: var(--text-2); line-height: 1.65; }
-  .house-note-body em { color: var(--pink); font-style: italic; }
-
-  /* ── BRAND HOUSE GRID ───────────────────────────────────────── */
-  .brand-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;
-    margin-top: 1rem;
-  }
-  @media (min-width: 720px) { .brand-grid { grid-template-columns: repeat(4, 1fr); } }
-  .brand-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 1.1rem 1rem 1rem;
-    text-decoration: none; color: inherit;
-    transition: background 0.2s, border-color 0.2s, transform 0.15s;
-    display: flex; flex-direction: column; gap: 0.6rem;
-  }
-  .brand-card:hover {
-    background: var(--surface-2);
-    border-color: var(--card-accent, rgba(224,96,126,0.4));
-    transform: translateY(-2px);
-  }
-  .brand-card-num {
-    font-family: var(--font-mono); font-size: 0.625rem;
+  .cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 24px; border-radius: 100px;
+    font-family: var(--f-mono); font-size: 11px;
     letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--card-accent, var(--pink));
+    text-decoration: none;
+    transition: all 0.2s ease;
   }
-  .brand-card-mini {
-    width: 100%; aspect-ratio: 1 / 1; border-radius: 8px;
-    overflow: hidden; position: relative;
-    background: var(--surface-3);
-    border: 1px solid var(--border-soft);
+  .cta-primary {
+    background: var(--ink-1); color: var(--surface);
+    border: 1px solid var(--ink-1);
   }
-  .brand-card-mini img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .brand-card-name {
-    font-family: var(--font-head); font-size: 0.9375rem;
-    font-weight: 600; color: var(--text); line-height: 1.2;
-  }
-  .brand-card-role {
-    font-size: 0.75rem; color: var(--text-3);
-    line-height: 1.45; flex: 1;
-  }
-
-  /* ── SCROLL ENTRY ───────────────────────────────────────────── */
-  .scroll-list { display: flex; flex-direction: column; gap: 0.75rem; }
-  .scroll-entry {
-    display: flex; align-items: center; gap: 1.5rem;
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 1.25rem 1.5rem;
-    text-decoration: none; color: inherit;
-    transition: background 0.2s, border-color 0.2s, transform 0.15s;
-    position: relative; overflow: hidden;
-  }
-  .scroll-entry::after {
-    content: ''; position: absolute; right: 1.5rem; top: 50%;
-    transform: translateY(-50%); width: 20px; height: 20px;
-    border-radius: 50%; background: var(--surface-3);
-    opacity: 0; transition: opacity 0.2s;
-    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 5H8M8 5L5 2M8 5L5 8' stroke='rgba(245,245,247,0.4)' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat; background-position: center;
-  }
-  .scroll-entry:hover { background: var(--surface-2); transform: translateX(3px); border-color: rgba(224,96,126,0.25); }
-  .scroll-entry:hover::after { opacity: 1; }
-  .entry-num {
-    font-family: var(--font-head); font-size: 1.75rem; font-weight: 800;
-    line-height: 1; color: var(--text-2); min-width: 52px; text-align: center; flex-shrink: 0;
-  }
-  .entry-body { flex: 1; min-width: 0; }
-  .entry-title {
-    font-family: var(--font-head); font-size: 1rem; font-weight: 600;
-    color: var(--text); margin-bottom: 0.25rem;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  }
-  .entry-desc { font-size: 0.875rem; color: var(--text-3); line-height: 1.5; }
-  .entry-badge {
-    font-family: var(--font-mono); font-size: 0.5625rem;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    padding: 0.2rem 0.6rem; border-radius: 999px; flex-shrink: 0;
-    color: var(--pink); border: 1px solid rgba(224,96,126,0.3); background: var(--pink-dim);
-  }
-
-  /* ── FAMILY WING ────────────────────────────────────────────── */
-  .family-grid {
-    display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.25rem;
-  }
-  @media (min-width: 720px) { .family-grid { grid-template-columns: 1fr 1fr; } }
-  .family-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-left: 3px solid var(--wine);
-    border-radius: 12px; padding: 1.5rem 1.75rem;
-  }
-  .family-card.alis { border-left-color: var(--azulejo); }
-  .family-card-pack {
-    font-family: var(--font-mono); font-size: 0.625rem;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 0.4rem;
-  }
-  .family-card-name {
-    font-family: var(--font-head); font-size: 1.25rem;
-    font-weight: 700; color: var(--text); margin-bottom: 0.5rem; line-height: 1.2;
-  }
-  .family-card-tag {
-    font-family: var(--font-body); font-style: italic;
-    font-size: 0.875rem; color: var(--rose); margin-bottom: 0.85rem;
-  }
-  .family-card-body {
-    font-size: 0.875rem; color: var(--text-3); line-height: 1.6;
-  }
-
-  
-  /* ── INVESTOR GRID + CONTACT ────────────────────────────────── */
-  .invest-grid {
-    display: grid; grid-template-columns: 1fr; gap: 0.75rem;
-    margin: 1.25rem 0 2rem;
-  }
-  @media (min-width: 720px) { .invest-grid { grid-template-columns: 1fr 1fr; } }
-  .invest-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 12px; padding: 1.25rem 1.5rem;
-  }
-  .invest-card-label {
-    font-family: var(--font-mono); font-size: 0.625rem;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 0.5rem;
-  }
-  .invest-card-value {
-    font-family: var(--font-head); font-size: 1.4rem; font-weight: 700;
-    color: var(--text); letter-spacing: -0.02em; line-height: 1.15;
-    margin-bottom: 0.5rem;
-  }
-  .invest-card-body { font-size: 0.875rem; color: var(--text-3); line-height: 1.55; }
-
-  .invest-cta-row {
-    display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem;
-  }
-  .section-cta.secondary {
-    color: var(--text-2);
-    border-color: var(--border);
-    background: transparent;
-  }
-  .section-cta.secondary:hover {
-    background: var(--surface-2);
-    border-color: var(--border-soft);
-    color: var(--text);
-  }
-
-  .contact-grid {
-    display: grid; grid-template-columns: 1fr; gap: 0.75rem;
-    margin: 1.25rem 0;
-  }
-  @media (min-width: 720px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
-  .contact-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 12px; padding: 1.1rem 1.4rem;
-    text-decoration: none; color: inherit;
-    transition: background 0.2s, border-color 0.2s, transform 0.15s;
-  }
-  .contact-card:hover {
-    background: var(--surface-2); border-color: rgba(247,201,72,0.3);
+  .cta-primary:hover {
+    background: var(--accent-2); border-color: var(--accent-2); color: var(--surface);
     transform: translateY(-1px);
   }
-  .contact-label {
-    font-family: var(--font-mono); font-size: 0.625rem;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--pink); margin-bottom: 0.4rem;
+  :root[data-theme="dark"] .cta-primary {
+    background: var(--accent); color: var(--surface);
+    border-color: var(--accent);
   }
-  .contact-email {
-    font-family: var(--font-head); font-size: 1rem; font-weight: 600;
-    color: var(--text); margin-bottom: 0.3rem; word-break: break-all;
+  :root[data-theme="dark"] .cta-primary:hover {
+    background: var(--gold-light); border-color: var(--gold-light);
   }
-  .contact-hint { font-size: 0.8125rem; color: var(--text-3); line-height: 1.5; }
+  .cta-primary::after { content: '→'; font-family: var(--f-serif); font-size: 14px; }
+  .cta-ghost {
+    background: transparent; color: var(--text-1);
+    border: 1px solid var(--line-strong);
+  }
+  .cta-ghost:hover {
+    background: var(--surface-2); border-color: var(--accent);
+    color: var(--ink-1);
+  }
+  .hero-meta {
+    font-family: var(--f-mono); font-size: 10px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--text-4);
+    display: flex; flex-wrap: wrap; gap: 8px 16px;
+    opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both;
+  }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-meta span + span::before {
+    content: '·'; color: var(--text-4); margin-right: 8px;
+  }
+  .hero-mark-wrap {
+    position: relative;
+    opacity: 0; animation: fadeUp 1.1s cubic-bezier(0.16,1,0.3,1) 0.35s both;
+  }
+  .hero-mark-frame {
+    aspect-ratio: 1 / 1.1;
+    background: linear-gradient(160deg, var(--surface-3) 0%, var(--surface-2) 100%);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 48px 32px; position: relative;
+    box-shadow: 0 1px 0 var(--line) inset, 0 24px 60px -30px color-mix(in oklab, var(--ink-1) 30%, transparent);
+  }
+  :root[data-theme="dark"] .hero-mark-frame {
+    background: linear-gradient(160deg, #0a0a14 0%, #14141f 100%);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 30px 80px -30px rgba(0,0,0,0.6);
+  }
+  .hero-mark-corner {
+    position: absolute;
+    font-family: var(--f-mono); font-size: 9px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--text-4);
+  }
+  .hero-mark-corner.tl { top: 16px; left: 20px; }
+  .hero-mark-corner.tr { top: 16px; right: 20px; color: var(--accent); }
+  .hero-mark-corner.bl { bottom: 16px; left: 20px; }
+  .hero-mark-corner.br { bottom: 16px; right: 20px; color: var(--text-3); }
+  .hero-mark-img {
+    width: 220px; max-width: 70%; height: auto;
+    margin: 0 auto;
+    animation: breathe 7s ease-in-out 1.2s infinite;
+  }
+  @keyframes breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.022); } }
+  .hero-mark-kanji {
+    font-family: var(--f-jp); font-size: 14px;
+    letter-spacing: 0.28em; color: var(--accent);
+    margin-top: 28px; opacity: 0.85;
+  }
 
-  /* ── FOOTER ─────────────────────────────────────────────────── */
-  footer {
-    border-top: 1px solid var(--border); padding: 2rem;
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 1rem;
-    max-width: 800px; margin: 60px auto 0; position: relative; z-index: 1;
+  /* ── §HOUSE ─────────────────────────────────────────────────── */
+  .house-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
+    margin-top: 32px;
   }
-  .footer-text {
-    font-family: var(--font-mono); font-size: 0.6875rem;
-    color: var(--text-4); letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.6;
+  @media (max-width: 880px) { .house-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .house-block h3 {
+    font-family: var(--f-serif); font-size: 28px; font-weight: 600;
+    color: var(--ink-1); margin-bottom: 12px; line-height: 1.15;
+  }
+  .house-block .lede {
+    font-family: var(--f-mono); font-size: 10.5px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 8px;
+  }
+  .house-block p {
+    font-size: 16px; color: var(--text-2); line-height: 1.7;
+  }
+
+  /* ── §THREE PILLARS ──────────────────────────────────────────── */
+  .pillars-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    margin-top: 40px;
+  }
+  @media (max-width: 980px) { .pillars-grid { grid-template-columns: 1fr; gap: 16px; } }
+  .pillar {
+    position: relative;
+    padding: 36px 32px;
+    background: var(--surface-3);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+  :root[data-theme="dark"] .pillar { background: var(--surface-2); }
+  .pillar:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .pillar-num {
+    position: absolute; top: 24px; right: 28px;
+    font-family: var(--f-mono); font-size: 10px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--text-4);
+  }
+  .pillar-eyebrow {
+    font-family: var(--f-mono); font-size: 10.5px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--pillar-accent, var(--accent));
+    margin-bottom: 16px;
+  }
+  .pillar-title {
+    font-family: var(--f-serif); font-style: italic;
+    font-size: 32px; font-weight: 500; letter-spacing: -0.012em;
+    line-height: 1.1; color: var(--ink-1);
+    margin-bottom: 20px;
+  }
+  .pillar-title .roman { font-style: normal; font-weight: 600; }
+  .pillar-rule {
+    width: 32px; height: 1px; background: var(--pillar-accent, var(--accent));
+    margin: 0 0 18px;
+  }
+  .pillar-body {
+    font-size: 15px; color: var(--text-2); line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .pillar-body strong { color: var(--text-1); font-weight: 500; }
+  .pillar-list {
+    list-style: none; padding: 0; margin: 0;
+    border-top: 1px solid var(--line-soft); padding-top: 16px;
+  }
+  .pillar-list li {
+    font-family: var(--f-mono); font-size: 10.5px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-3); padding: 6px 0;
+    display: flex; gap: 10px;
+  }
+  .pillar-list li::before { content: '·'; color: var(--pillar-accent, var(--accent)); }
+
+  /* ── §BRAND HOUSE ────────────────────────────────────────────── */
+  .brand-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+    margin-top: 40px;
+  }
+  @media (max-width: 980px) { .brand-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+  .brand-card {
+    text-decoration: none; color: inherit;
+    background: var(--surface-3); border: 1px solid var(--line);
+    border-radius: 4px; padding: 22px 22px 24px;
+    display: flex; flex-direction: column; gap: 14px;
+    transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+  }
+  :root[data-theme="dark"] .brand-card { background: var(--surface-2); }
+  .brand-card:hover {
+    border-color: var(--card-accent, var(--accent));
+    transform: translateY(-2px);
+    background: var(--surface-4);
+  }
+  :root[data-theme="dark"] .brand-card:hover { background: var(--surface-3); }
+  .brand-card-num {
+    font-family: var(--f-mono); font-size: 10px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--card-accent, var(--accent));
+  }
+  .brand-card-mini {
+    width: 100%; aspect-ratio: 1 / 1; border-radius: 3px;
+    overflow: hidden; background: var(--surface-2);
+    border: 1px solid var(--line-soft);
+  }
+  .brand-card-mini img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .brand-card-name {
+    font-family: var(--f-serif); font-size: 19px; font-weight: 600;
+    color: var(--ink-1); line-height: 1.15;
+  }
+  .brand-card-role {
+    font-size: 13px; color: var(--text-3);
+    line-height: 1.5; flex: 1;
+  }
+
+  /* ── §FAMILY WING ────────────────────────────────────────────── */
+  .family-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    margin-top: 40px;
+  }
+  @media (max-width: 880px) { .family-grid { grid-template-columns: 1fr; } }
+  .family-card {
+    background: var(--surface-3); border: 1px solid var(--line);
+    border-radius: 4px; padding: 36px 32px 32px;
+    border-left: 2px solid var(--accent-2);
+  }
+  :root[data-theme="dark"] .family-card { background: var(--surface-2); }
+  .family-card.alis { border-left-color: var(--azulejo); }
+  .family-card-pack {
+    font-family: var(--f-mono); font-size: 10px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 14px;
+  }
+  .family-card-name {
+    font-family: var(--f-serif); font-style: italic;
+    font-size: 30px; font-weight: 600; letter-spacing: -0.01em;
+    color: var(--ink-1); margin-bottom: 8px; line-height: 1.1;
+  }
+  .family-card-tag {
+    font-family: var(--f-serif); font-style: italic;
+    font-size: 16px; color: var(--accent-2); margin-bottom: 18px;
+  }
+  :root[data-theme="dark"] .family-card-tag { color: var(--accent-3); }
+  .family-card.alis .family-card-tag { color: var(--azulejo); }
+  .family-card-body {
+    font-size: 14.5px; color: var(--text-2); line-height: 1.65;
+  }
+  .family-card-body strong { color: var(--text-1); font-weight: 500; }
+
+  /* ── §INVESTORS ──────────────────────────────────────────────── */
+  .invest-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    margin-top: 40px;
+  }
+  @media (max-width: 980px) { .invest-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { .invest-grid { grid-template-columns: 1fr; } }
+  .invest-card {
+    background: var(--surface-3); border: 1px solid var(--line);
+    border-radius: 4px; padding: 28px 26px 26px;
+  }
+  :root[data-theme="dark"] .invest-card { background: var(--surface-2); }
+  .invest-card-label {
+    font-family: var(--f-mono); font-size: 10px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 14px;
+  }
+  .invest-card-value {
+    font-family: var(--f-serif); font-style: italic;
+    font-size: 28px; font-weight: 600; letter-spacing: -0.01em;
+    color: var(--ink-1); margin-bottom: 12px; line-height: 1.1;
+    font-feature-settings: 'tnum';
+  }
+  .invest-card-body {
+    font-size: 14px; color: var(--text-2); line-height: 1.65;
+  }
+
+  /* ── CTAs row inside sections ────────────────────────────────── */
+  .section-ctas {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    margin-top: 36px;
+  }
+
+  /* ── §CONTACT ────────────────────────────────────────────────── */
+  .contact-card {
+    background: var(--surface-3); border: 1px solid var(--line);
+    border-radius: 4px; padding: 40px 36px;
+    margin-top: 36px;
+    display: grid; grid-template-columns: 1fr auto; gap: 36px;
+    align-items: center;
+  }
+  :root[data-theme="dark"] .contact-card { background: var(--surface-2); }
+  @media (max-width: 720px) {
+    .contact-card { grid-template-columns: 1fr; padding: 32px 28px; }
+  }
+  .contact-card .contact-label {
+    font-family: var(--f-mono); font-size: 10px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 12px;
+  }
+  .contact-card .contact-mailbox {
+    font-family: var(--f-serif); font-style: italic;
+    font-size: 28px; font-weight: 600;
+    color: var(--ink-1); margin-bottom: 14px; word-break: break-all;
+  }
+  .contact-card a.contact-mailbox { color: var(--accent-2); text-decoration: none; transition: color 0.2s ease; }
+  :root[data-theme="dark"] .contact-card a.contact-mailbox { color: var(--accent); }
+  .contact-card a.contact-mailbox:hover { color: var(--accent); }
+  :root[data-theme="dark"] .contact-card a.contact-mailbox:hover { color: var(--gold-light); }
+  .contact-card .contact-hint {
+    font-size: 14.5px; color: var(--text-2); line-height: 1.65; max-width: 480px;
+  }
+
+  /* ── FOOTER ──────────────────────────────────────────────────── */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 64px 0 48px; margin-top: 80px;
+    position: relative; z-index: 1;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 880px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   }
   .footer-brand {
-    font-family: var(--font-head); font-size: 0.875rem; font-weight: 700;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    background: linear-gradient(90deg, var(--pink), var(--gold));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    font-family: var(--f-serif); font-style: italic;
+    font-size: 26px; font-weight: 600;
+    color: var(--ink-1); margin-bottom: 16px;
   }
-  .footer-brand .kaizen-foot {
-    font-family: var(--font-jp); margin-left: 0.6rem;
-    color: var(--gold); -webkit-text-fill-color: var(--gold);
-    background: none; opacity: 0.85; letter-spacing: 0.2em;
+  .footer-brand .gradient {
+    background: linear-gradient(110deg, var(--accent-3), var(--accent), var(--accent-4));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    font-style: normal; font-weight: 600;
+  }
+  .footer-blurb {
+    font-size: 13.5px; color: var(--text-3); line-height: 1.65;
+    max-width: 320px; margin-bottom: 16px;
+  }
+  .footer-kanji {
+    font-family: var(--f-jp); font-size: 14px;
+    letter-spacing: 0.28em; color: var(--accent);
+  }
+  .footer-col-title {
+    font-family: var(--f-mono); font-size: 10px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--text-4); margin-bottom: 16px;
+  }
+  .footer-col ul {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .footer-col a {
+    font-family: var(--f-sans); font-size: 13.5px;
+    color: var(--text-2); text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .footer-col a:hover { color: var(--ink-1); }
+  .footer-rule {
+    height: 1px; background: var(--line); margin-bottom: 32px;
+  }
+  .footer-bar {
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    gap: 16px;
+    font-family: var(--f-mono); font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-4);
   }
 
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-  @media (max-width: 640px) {
-    nav { padding: 0 1.25rem; }
-    .hero { padding: 90px 1.25rem 50px; }
-    .hero-emblem { width: 180px; height: 104px; }
-    section { padding: 50px 1.25rem; }
-    .scroll-entry { padding: 1rem 1.25rem; gap: 1rem; }
-    .entry-num { font-size: 1.25rem; min-width: 36px; }
-    footer { padding: 2rem 1.25rem; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
+
   @media (prefers-reduced-motion: reduce) {
-    .hero-logo { animation: none !important; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
     html { scroll-behavior: auto; }
+  }
+
+  @media print {
+    body::before, body::after, nav, .theme-toggle, .cta { display: none !important; }
+    body { background: white !important; color: black !important; }
+    section { padding: 24px 0; page-break-inside: avoid; }
+    .container { max-width: 100%; padding: 0 16mm; }
+    .hero { padding: 32px 0; }
+    .brand-card, .pillar, .invest-card, .family-card, .contact-card {
+      break-inside: avoid; box-shadow: none !important;
+    }
   }
 </style>
 </head>
@@ -462,247 +681,400 @@
 
 <nav>
   <a class="nav-brand" href="/">
-<span class="accent">Æther</span> · Museion
+    <span class="ae">Æther</span>
+    <span class="sep">House of Museion</span>
   </a>
   <div class="nav-right">
     <a class="nav-link" href="#house">House</a>
-    <a class="nav-link" href="#brand-house">Brands</a>
+    <a class="nav-link" href="#build">Build</a>
+    <a class="nav-link" href="#brands">Brands</a>
     <a class="nav-link" href="#investors">Invest</a>
     <a class="nav-link" href="#contact">Contact</a>
-    <span class="nav-badge">House of Museion</span>
+    <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Toggle theme">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="label-light">Light · Parchment</span>
+      <span class="label-dark">Dark · Museion</span>
+    </button>
   </div>
 </nav>
 
-<header class="hero">
-  <img class="hero-logo" src="/museion-logo.png" alt="Museion" />
-  <div class="hero-eyebrow">House of Museion · Sealed April 2026</div>
-  <h1 class="hero-title"><span class="gradient">What we are building</span></h1>
-  <p class="hero-subtitle">A sovereign-AI-first holding company. Eight brand packs, six strategic pillars, one parent. The product is the Athenaeum — Microsoft 365 for sovereign creators. The intelligence surface is Veritas Network of Truth — typed, stake-backed claims with KAIZE forensics as the founding application. The order is the Gentlemen of Muse. The work is to keep getting better.</p>
-  <div class="hero-divider"></div>
-  <div class="kaizen-mark">改善</div>
-</header>
+<!-- ─── HERO ────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="hero-eyebrow">Museion Holdings · Sealed April 2026</div>
+        <h1 class="hero-title">
+          A house,<br/>
+          <span class="pause">not a startup.</span>
+        </h1>
+        <p class="hero-dek">
+          Museion Holdings is the parent of an eight-vertical group — sovereign AI workspace, forensic intelligence, network of truth, hospitality, creative — held to a single standard: <strong>the work is built to outlast the founder.</strong>
+        </p>
+        <div class="hero-divider"></div>
+        <div class="hero-ctas">
+          <a class="cta cta-primary" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Master%20Plan">Read the master plan</a>
+          <a class="cta cta-ghost" href="#contact">Get in touch</a>
+        </div>
+        <div class="hero-meta">
+          <span>Founded 2026</span>
+          <span>London · Lisbon</span>
+          <span>Pre-seed</span>
+          <span>Eight brand packs</span>
+        </div>
+      </div>
 
-<!-- ─── §  THE HOUSE  ─────────────────────────────────────────── -->
+      <div class="hero-mark-wrap">
+        <div class="hero-mark-frame">
+          <div class="hero-mark-corner tl">M·H</div>
+          <div class="hero-mark-corner tr">House Mark</div>
+          <div class="hero-mark-corner bl">v1.0</div>
+          <div class="hero-mark-corner br">改善</div>
+          <img class="hero-mark-img" src="/museion-logo.png" alt="Museion mark" />
+          <div class="hero-mark-kanji">改善</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── §  THE HOUSE ────────────────────────────────────────────────── -->
 <section id="house">
-  <div class="section-label">The House</div>
-  <h2 class="section-intro"><span class="accent">Museion Holdings</span> is the legal name. <span class="accent-pink">House of Museion</span> is the ceremonial one. Both are correct.</h2>
+  <div class="container narrow">
+    <div class="section-label">The House</div>
+    <h2 class="section-title">
+      <span class="accent">Museion Holdings</span> is the legal name. <span class="gradient">House of Museion</span> is the ceremonial one.
+    </h2>
 
-  <div class="section-prose">
-    <p><strong>Museion Holdings</strong> (Limited) is the corporate parent — the entity that holds the IP, the equity, the cap table, the contracts, the relationships with banks and counsel and investors. It's the name on the paperwork.</p>
+    <div class="house-grid">
+      <div class="house-block">
+        <div class="lede">Legal · Corporate</div>
+        <h3>Museion Holdings</h3>
+        <p>The corporate parent. Holds the IP, the equity, the cap table, the contracts, and the relationships with banks and counsel. UK-domiciled with a Cayman foundation for token issuance. The name on the paperwork.</p>
+      </div>
+      <div class="house-block">
+        <div class="lede">Ceremonial · Brand</div>
+        <h3>House of Museion</h3>
+        <p>The brand above the brands. Carries the Athenaeum suite, the Gentlemen of Muse, the scrolls, and every storytelling moment. The name on the seal — and the seal everything closes with: <em>改善 — the work is to keep getting better.</em></p>
+      </div>
+    </div>
 
-    <p><strong>House of Museion</strong> is the brand above the brands — the ceremonial layer that the Athenaeum suite, the Gentlemen of Muse, the scrolls, and every storytelling moment carry. It's the name on the seal.</p>
-
-    <p>Underneath sit four operating opcos (<strong>YAKK Studios</strong>, <strong>Museion Labs</strong>, <strong>KAIZE Labs</strong>, <strong>Veritas Foundation</strong>), one community order (<strong>Gentlemen of Muse</strong>), one chain venue (<strong>$MUSE</strong> on Ethereum L2 → eventual Veritas L1), and a small family hospitality wing (<strong>Johnny Boy's Wines</strong> · <strong>Ali's of Aberdeen</strong>) carried forward from Jay's grandparents.</p>
-
-    <p>The thread that runs through it: <em>build something honest, remember what matters, never let it get owned by a single interest</em>. 改善 — the work is to keep getting better.</p>
+    <div class="pull">
+      Underneath sit four operating opcos, one community order, one chain venue, and a small family hospitality wing — eight brand packs, one parent, one standard.
+    </div>
   </div>
 </section>
 
-<!-- ─── §  THE BRAND HOUSE  ───────────────────────────────────── -->
-<section id="brand-house">
-  <div class="section-label">The Brand House · Eight Packs</div>
+<!-- ─── §  THE THREE PILLARS · Intelligence · Truth · Legacy ─────────── -->
+<section id="build">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-label">What We Build</div>
+      <h2 class="section-title">
+        Three pillars. <span class="accent">Intelligence. Truth. Legacy.</span>
+      </h2>
+      <p class="section-prose" style="font-size: 18px; max-width: 720px;">
+        The company resolves to three load-bearing surfaces. Each is a real product with a real shipping calendar; each is held by its own brand pack and operating logic; each pulls its weight commercially. Together they are what Museion Holdings is for.
+      </p>
+    </div>
 
-  <div class="house-note">
-    <div class="house-note-label">✦ From the House</div>
-    <div class="house-note-body">Each pack is a brand on the family tree — its mark, its palette, its voice, its place in the diagram. The first six are the digital verticals. The last two — Pack 07 and Pack 08 — are the family wing, in honour of Grandad John and in loving memory of Grandma Ali. <em>Detailed pack pages are forthcoming.</em></div>
-  </div>
+    <div class="pillars-grid">
+      <article class="pillar" style="--pillar-accent: var(--accent-3);">
+        <div class="pillar-num">I</div>
+        <div class="pillar-eyebrow">Intelligence</div>
+        <h3 class="pillar-title">Athenaeum</h3>
+        <div class="pillar-rule"></div>
+        <p class="pillar-body">
+          The <strong>sovereign AI workspace</strong> — Microsoft 365 for creators who refuse to lose their archive to a SaaS provider. Local-first by default, cloud as strict opt-in. Hub app <em>Aether</em> shipped v0.2 in April 2026; the suite extends across writing, data, decks, workflows, capture, and calendar — eight apps, one identity, one archive, one council.
+        </p>
+        <ul class="pillar-list">
+          <li>Aether · Stylus · Tabula</li>
+          <li>Vellum · Pantheon · Atrium</li>
+          <li>Codex · Almanac · Cipher</li>
+        </ul>
+      </article>
 
-  <div class="brand-grid">
+      <article class="pillar" style="--pillar-accent: var(--accent-2);">
+        <div class="pillar-num">II</div>
+        <div class="pillar-eyebrow">Truth</div>
+        <h3 class="pillar-title">Veritas</h3>
+        <div class="pillar-rule"></div>
+        <p class="pillar-body">
+          The <strong>Network of Truth</strong>. Typed, stake-backed forensic intelligence claims with cryptographic provenance — a register of what is and isn't true on-chain, validated by the Order, paid for in $MUSE. Founding application: <em>KAIZE forensics</em> — operator wallet identification, wash-trade detection, rug forensics — already producing intelligence that wires its way into headlines.
+        </p>
+        <ul class="pillar-list">
+          <li>KAIZE forensic engine</li>
+          <li>$MUSE on Base · Veritas L1</li>
+          <li>TruthStake · Reviewer Roster · Stage-3 jury</li>
+        </ul>
+      </article>
 
-    <a class="brand-card" href="#" style="--card-accent: #e0607e; --card-accent-2: #f7c948;">
-      <div class="brand-card-num">Pack 01</div>
-      <div class="brand-card-mini"><img src="/img/brand-house/01-museion.png" alt="Museion brand mark" loading="lazy"/></div>
-      <div class="brand-card-name">Museion</div>
-      <div class="brand-card-role">The parent · sovereign workspace · the workshop</div>
-    </a>
-
-    <a class="brand-card" href="#" style="--card-accent: #c2185b; --card-accent-2: #ad8520;">
-      <div class="brand-card-num">Pack 02</div>
-      <div class="brand-card-mini"><img src="/img/brand-house/02-veritas.jpg" alt="Veritas Network of Truth seal" loading="lazy"/></div>
-      <div class="brand-card-name">Veritas</div>
-      <div class="brand-card-role">Network of Truth · KAIZE forensic intelligence</div>
-    </a>
-
-    <a class="brand-card" href="#" style="--card-accent: #7a4628; --card-accent-2: #c89058;">
-      <div class="brand-card-num">Pack 03</div>
-      <div class="brand-card-mini"><img src="/img/brand-house/03-gentlemen.png" alt="Gentlemen of Muse crest" loading="lazy"/></div>
-      <div class="brand-card-name">Gentlemen of Muse</div>
-      <div class="brand-card-role">The Order · 13-seat governance · stewardship</div>
-    </a>
-
-    <a class="brand-card" href="#" style="--card-accent: #a8702a; --card-accent-2: #a8243a;">
-      <div class="brand-card-num">Pack 04</div>
-      <div class="brand-card-mini"><img src="/img/brand-house/04-muse-l2.jpg" alt="Muse Layer 2 mark" loading="lazy"/></div>
-      <div class="brand-card-name">Muse Layer 2</div>
-      <div class="brand-card-role">The chain · $MUSE settlement venue · L2 → L1</div>
-    </a>
-
-    <a class="brand-card" href="#" style="--card-accent: #5a3aa0; --card-accent-2: #d4a818;">
-      <div class="brand-card-num">Pack 05</div>
-      <div class="brand-card-mini"><img src="/img/brand-house/05-veritas-geometric.jpg" alt="Veritas geometric V" loading="lazy"/></div>
-      <div class="brand-card-name">Veritas (Geometric)</div>
-      <div class="brand-card-role">Veritas Network · forensic-grade claims</div>
-    </a>
-
-    <a class="brand-card" href="#" style="--card-accent: #e0607e; --card-accent-2: #f7c948;">
-      <div class="brand-card-num">Pack 06</div>
-      <div class="brand-card-mini"><img src="/img/brand-house/06-yakk.png" alt="YAKK Studios mark" loading="lazy"/></div>
-      <div class="brand-card-name">YAKK Studios</div>
-      <div class="brand-card-role">The creative house · silent-video pipeline</div>
-    </a>
-
-    <a class="brand-card" href="#" style="--card-accent: #6b1a2a; --card-accent-2: #9a7a30;">
-      <div class="brand-card-num">Pack 07</div>
-      <div class="brand-card-mini"><img src="/img/brand-house/07-johnny-boys.jpg" alt="Johnny Boy's Wines label" loading="lazy"/></div>
-      <div class="brand-card-name">Johnny Boy's Wines</div>
-      <div class="brand-card-role">Family wing · in honour of Grandad John Watt</div>
-    </a>
-
-    <a class="brand-card" href="#" style="--card-accent: #9a7a30; --card-accent-2: #7da7c4;">
-      <div class="brand-card-num">Pack 08</div>
-      <div class="brand-card-mini"><img src="/img/brand-house/08-alis-of-aberdeen.png" alt="Ali's of Aberdeen mark" loading="lazy"/></div>
-      <div class="brand-card-name">Ali's of Aberdeen</div>
-      <div class="brand-card-role">Family wing · the bar in Portugal · in memory of Grandma Ali</div>
-    </a>
-
+      <article class="pillar" style="--pillar-accent: var(--accent-4);">
+        <div class="pillar-num">III</div>
+        <div class="pillar-eyebrow">Legacy</div>
+        <h3 class="pillar-title">House of Museion</h3>
+        <div class="pillar-rule"></div>
+        <p class="pillar-body">
+          The <strong>human and family arm</strong>. The Gentlemen of Muse — a curated 13-seat governance and stewardship order under a constitution of seven non-negotiable codes. The family wing — Johnny Boy's Wines and Ali's of Aberdeen — small in commercial weight, large in dedication. The seal under which everything carries.
+        </p>
+        <ul class="pillar-list">
+          <li>Gentlemen of Muse · Order</li>
+          <li>Johnny Boy's Wines · Pack 07</li>
+          <li>Ali's of Aberdeen · Pack 08</li>
+        </ul>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- ─── §  THE FAMILY WING  ───────────────────────────────────── -->
+<!-- ─── §  THE BRAND HOUSE ──────────────────────────────────────────── -->
+<section id="brands">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-label">The Brand House · Eight Packs</div>
+      <h2 class="section-title">
+        The full <span class="accent">family tree.</span>
+      </h2>
+      <p class="section-prose" style="font-size: 18px; max-width: 720px;">
+        Each pack is a brand on the family tree — its mark, its palette, its voice, its place in the diagram. The first six are the digital verticals; Packs 07 + 08 are the family wing, in honour of John Watt and in loving memory of Alison Watt.
+      </p>
+    </div>
+
+    <div class="brand-grid">
+      <a class="brand-card" href="#" style="--card-accent: #d62888;">
+        <div class="brand-card-num">Pack 01</div>
+        <div class="brand-card-mini"><img src="/img/brand-house/01-museion.png" alt="Museion mark" loading="lazy"/></div>
+        <div class="brand-card-name">Museion</div>
+        <div class="brand-card-role">The parent · sovereign workspace · the workshop</div>
+      </a>
+      <a class="brand-card" href="#" style="--card-accent: #c2185b;">
+        <div class="brand-card-num">Pack 02</div>
+        <div class="brand-card-mini"><img src="/img/brand-house/02-veritas.jpg" alt="Veritas Network of Truth seal" loading="lazy"/></div>
+        <div class="brand-card-name">Veritas</div>
+        <div class="brand-card-role">Network of Truth · KAIZE forensic intelligence</div>
+      </a>
+      <a class="brand-card" href="#" style="--card-accent: #7a4628;">
+        <div class="brand-card-num">Pack 03</div>
+        <div class="brand-card-mini"><img src="/img/brand-house/03-gentlemen.png" alt="Gentlemen of Muse crest" loading="lazy"/></div>
+        <div class="brand-card-name">Gentlemen of Muse</div>
+        <div class="brand-card-role">The Order · 13-seat governance · stewardship</div>
+      </a>
+      <a class="brand-card" href="#" style="--card-accent: #a8702a;">
+        <div class="brand-card-num">Pack 04</div>
+        <div class="brand-card-mini"><img src="/img/brand-house/04-muse-l2.jpg" alt="Muse Layer 2 mark" loading="lazy"/></div>
+        <div class="brand-card-name">Muse Layer 2</div>
+        <div class="brand-card-role">The chain · $MUSE settlement venue · L2 → Veritas L1</div>
+      </a>
+      <a class="brand-card" href="#" style="--card-accent: #5a3aa0;">
+        <div class="brand-card-num">Pack 05</div>
+        <div class="brand-card-mini"><img src="/img/brand-house/05-veritas-geometric.jpg" alt="Veritas geometric V" loading="lazy"/></div>
+        <div class="brand-card-name">Veritas (Geometric)</div>
+        <div class="brand-card-role">Veritas attestation network · forensic-grade claims</div>
+      </a>
+      <a class="brand-card" href="#" style="--card-accent: #d62888;">
+        <div class="brand-card-num">Pack 06</div>
+        <div class="brand-card-mini"><img src="/img/brand-house/06-yakk.png" alt="YAKK Studios mark" loading="lazy"/></div>
+        <div class="brand-card-name">YAKK Studios</div>
+        <div class="brand-card-role">The creative house · silent-video pipeline</div>
+      </a>
+      <a class="brand-card" href="#" style="--card-accent: #6b1a2a;">
+        <div class="brand-card-num">Pack 07</div>
+        <div class="brand-card-mini"><img src="/img/brand-house/07-johnny-boys.jpg" alt="Johnny Boy's Wines label" loading="lazy"/></div>
+        <div class="brand-card-name">Johnny Boy's Wines</div>
+        <div class="brand-card-role">Family wing · in honour of Grandad John Watt</div>
+      </a>
+      <a class="brand-card" href="#" style="--card-accent: #9a7a30;">
+        <div class="brand-card-num">Pack 08</div>
+        <div class="brand-card-mini"><img src="/img/brand-house/08-alis-of-aberdeen.png" alt="Ali's of Aberdeen mark" loading="lazy"/></div>
+        <div class="brand-card-name">Ali's of Aberdeen</div>
+        <div class="brand-card-role">Family wing · the bar in Portugal · in memory of Grandma Ali</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── §  FAMILY WING ──────────────────────────────────────────────── -->
 <section id="family">
-  <div class="section-label">The Family Wing</div>
-  <h2 class="section-intro">The smallest commercial weight. The <span class="accent">largest emotional weight.</span> Both are correct.</h2>
+  <div class="container narrow">
+    <div class="section-label">The Family Wing</div>
+    <h2 class="section-title">
+      The smallest commercial weight. The <span class="accent">largest emotional weight.</span>
+    </h2>
+    <p class="section-prose" style="font-size: 18px;">
+      The family wing is the holdco's hospitality side — where the commercial work meets a dedication to the people who came before. Two surfaces, two names, one shared visual language with the framed <em>A Life in Wine</em> memorial scroll as their canonical artefact.
+    </p>
 
-  <div class="section-prose">
-    <p>The family wing is the holdco's hospitality side — where the commercial work meets a dedication to the people who came before. Two surfaces, two names, one shared visual language with the framed <em>A Life in Wine</em> memorial scroll as their canonical artefact. Pack 07 honours <strong>John Watt</strong>. Pack 08 carries <strong>Alison Watt</strong>'s name forward, with Aberdeen heritage threaded into a Portuguese setting.</p>
-  </div>
-
-  <div class="family-grid">
-
-    <div class="family-card">
-      <div class="family-card-pack">Pack 07</div>
-      <div class="family-card-name">Johnny Boy's Wines</div>
-      <div class="family-card-tag">A wine merchant who knew you when you were small.</div>
-      <div class="family-card-body">In honour of <strong>John Watt</strong>. A wine merchant's curated cellar — members' shipments, handwritten tasting notes, the gold-bordered medallion lifted from the memorial scroll.</div>
+    <div class="family-grid">
+      <article class="family-card">
+        <div class="family-card-pack">Pack 07</div>
+        <div class="family-card-name">Johnny Boy's Wines</div>
+        <div class="family-card-tag">A wine merchant who knew you when you were small.</div>
+        <div class="family-card-body">In honour of <strong>John Watt</strong>. A wine merchant's curated cellar — members' shipments, handwritten tasting notes, the gold-bordered medallion lifted from the memorial scroll.</div>
+      </article>
+      <article class="family-card alis">
+        <div class="family-card-pack">Pack 08</div>
+        <div class="family-card-name">Ali's of Aberdeen</div>
+        <div class="family-card-tag">Aberdeen warmth · Portuguese light.</div>
+        <div class="family-card-body">In loving memory of <strong>Alison Watt</strong>, named for the granite city she was from. Set in <strong>Portugal</strong>. The framed John Watt memorial scroll hangs centre-position behind the bar.</div>
+      </article>
     </div>
-
-    <div class="family-card alis">
-      <div class="family-card-pack">Pack 08</div>
-      <div class="family-card-name">Ali's of Aberdeen</div>
-      <div class="family-card-tag">Aberdeen warmth · Portuguese light.</div>
-      <div class="family-card-body">In loving memory of <strong>Alison Watt</strong>, named for the granite city she was from. Set in <strong>Portugal</strong>. The framed John Watt memorial scroll hangs centre-position behind the bar.</div>
-    </div>
-
   </div>
 </section>
 
-<!-- ─── §  FOR INVESTORS  ─────────────────────────────────────── -->
+<!-- ─── §  FOR INVESTORS ────────────────────────────────────────────── -->
 <section id="investors">
-  <div class="section-label">For Investors · Pre-seed</div>
-  <h2 class="section-intro">Operator-funded, family-committed, <span class="accent">open to first institutional cheque.</span></h2>
+  <div class="container narrow">
+    <div class="section-label">For Investors · Pre-seed · April 2026</div>
+    <h2 class="section-title">
+      Operator-funded. Family-committed. <span class="accent">Open to first institutional cheque.</span>
+    </h2>
+    <p class="section-prose" style="font-size: 18px;">
+      Museion Holdings is in <strong>pre-seed</strong>. The product is real. The brand house is sealed. The legal scaffolding is drafted. The runway has been carried by founder capital. We are open to a small, aligned institutional round to take the company through $MUSE TGE and the first paying Athenaeum customers.
+    </p>
 
-  <div class="section-prose">
-    <p>Museion Holdings is in <strong>pre-seed</strong>. The product is real (Aether v0.2 shipped 2026-04-26), the brand house is sealed (eight packs, six strategic pillars), the legal scaffolding is drafted (UK opcos + Cayman foundation for token issuance), and the runway has been carried by founder capital. Now we are open to a small, aligned institutional round.</p>
-  </div>
-
-  <div class="invest-grid">
-    <div class="invest-card">
-      <div class="invest-card-label">The Ask</div>
-      <div class="invest-card-value">£750k–£1M</div>
-      <div class="invest-card-body">12-month runway through $MUSE TGE. Open to syndicate of aligned operators — no growth-tier funds chasing yield.</div>
+    <div class="invest-grid">
+      <div class="invest-card">
+        <div class="invest-card-label">The Ask</div>
+        <div class="invest-card-value">£750k–£1M</div>
+        <div class="invest-card-body">12-month runway through $MUSE TGE. Open to a syndicate of aligned operators — no growth-tier funds chasing yield.</div>
+      </div>
+      <div class="invest-card">
+        <div class="invest-card-label">Use of Funds</div>
+        <div class="invest-card-value">Audit · Counsel · Hires</div>
+        <div class="invest-card-body">Cantina audit on TruthStake.sol + the $MUSE token contract · UK + Cayman token counsel · 2–3 hires for the Athenaeum suite · ops + treasury setup.</div>
+      </div>
+      <div class="invest-card">
+        <div class="invest-card-label">Cap Table (Initial)</div>
+        <div class="invest-card-value">65 / 20 / 10 / 5</div>
+        <div class="invest-card-body">Founder 65% · Core 4 reserve 20% (3y vest) · option pool 10% · strategic reserve 5%. Token side held separately via Veritas Foundation (Cayman).</div>
+      </div>
+      <div class="invest-card">
+        <div class="invest-card-label">$MUSE Token</div>
+        <div class="invest-card-value">1B fixed · ERC-20Votes</div>
+        <div class="invest-card-body">On Base for v1, eventual Veritas L1 migration. 25% liquid at TGE via LBP. 18% team (1y cliff + 3y linear). Multi-sig treasury, Snapshot-then-Bravo governance.</div>
+      </div>
+      <div class="invest-card">
+        <div class="invest-card-label">Y1 Revenue Target</div>
+        <div class="invest-card-value">~£255k</div>
+        <div class="invest-card-body">YAKK Studios brand-system engagements, Silent Cuts subscriptions, KAIZE-adjacent intelligence content. Diversified, services-first, not 100% reliant on token-side success.</div>
+      </div>
+      <div class="invest-card">
+        <div class="invest-card-label">Shipped to Date</div>
+        <div class="invest-card-value">v0.2 · 8 packs · live</div>
+        <div class="invest-card-body">Aether dev console v0.2 · all 8 brand packs sealed · master plan v1.0 · five published philosophy scrolls · this site live on the legal-entity domain.</div>
+      </div>
     </div>
 
-    <div class="invest-card">
-      <div class="invest-card-label">Use of Funds</div>
-      <div class="invest-card-value">Audit · Counsel · Hires</div>
-      <div class="invest-card-body">Cantina audit on TruthStake.sol + $MUSE token · UK + Cayman token counsel · 2–3 hires for Athenaeum suite (Stylus / Tabula / Pantheon panels) · ops + treasury setup.</div>
+    <div class="section-ctas">
+      <a class="cta cta-primary" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Investor%20Enquiry">Request the master plan</a>
+      <a class="cta cta-ghost" href="#contact">Open conversation</a>
     </div>
-
-    <div class="invest-card">
-      <div class="invest-card-label">Cap Table (Initial)</div>
-      <div class="invest-card-value">65 / 20 / 10 / 5</div>
-      <div class="invest-card-body">Founder 65% · Core 4 reserve 20% (3y vest) · option pool 10% · strategic reserve 5%. Token side held separately via Veritas Foundation (Cayman). Real numbers refined with corporate counsel pre-close.</div>
-    </div>
-
-    <div class="invest-card">
-      <div class="invest-card-label">$MUSE Token</div>
-      <div class="invest-card-value">1B fixed · ERC-20Votes</div>
-      <div class="invest-card-body">On Base for v1, eventual Veritas L1 migration. 25% liquid at TGE via LBP. 18% team (1y cliff + 3y linear). Audit-gated, multi-sig treasury (5-of-7 Safe), Snapshot-then-Bravo governance.</div>
-    </div>
-
-    <div class="invest-card">
-      <div class="invest-card-label">Y1 Revenue Target</div>
-      <div class="invest-card-value">~£255k</div>
-      <div class="invest-card-body">YAKK Studios brand-system engagements + Silent Cuts subscriptions + KAIZE-adjacent intelligence content. Diversified, services-first, not 100% reliant on token-side success.</div>
-    </div>
-
-    <div class="invest-card">
-      <div class="invest-card-label">Shipped to Date</div>
-      <div class="invest-card-value">v0.2 · 8 packs · live</div>
-      <div class="invest-card-body">Aether dev console v0.2 · all 8 brand packs sealed · master plan v1.0 · five published philosophy scrolls · this site live on the legal-entity domain.</div>
-    </div>
-  </div>
-
-  <div class="invest-cta-row">
-    <a class="section-cta" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Investor%20Enquiry">Request the master plan</a>
-    <a class="section-cta secondary" href="#contact">Get in touch</a>
   </div>
 </section>
 
-<!-- ─── §  GET IN TOUCH  ──────────────────────────────────────── -->
-<section id="contact">
-  <div class="section-label">Get in Touch</div>
-  <h2 class="section-intro">One mailbox, one human, one reply within <span class="accent">two working days.</span></h2>
-
-  <div class="section-prose">
-    <p>Museion Holdings is small, deliberate, and direct. There is no PR firm. There is no inbox-zero theatre. If you write — for an investor conversation, a partnership, a press question, or just to ask what we're up to — Jay will read it, and you'll get an actual reply.</p>
-  </div>
-
-  <div class="contact-grid">
-    <a class="contact-card" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Investor%20Enquiry">
-      <div class="contact-label">Investors</div>
-      <div class="contact-email">jay@museionholdings.xyz</div>
-      <div class="contact-hint">Pre-seed conversations · master plan · cap table</div>
-    </a>
-    <a class="contact-card" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Partnership">
-      <div class="contact-label">Partnerships</div>
-      <div class="contact-email">jay@museionholdings.xyz</div>
-      <div class="contact-hint">Co-build · integration · YAKK creative engagements</div>
-    </a>
-    <a class="contact-card" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Press">
-      <div class="contact-label">Press</div>
-      <div class="contact-email">jay@museionholdings.xyz</div>
-      <div class="contact-hint">Quotes · briefings · KAIZE forensic intelligence</div>
-    </a>
-    <a class="contact-card" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Hello">
-      <div class="contact-label">Anyone Else</div>
-      <div class="contact-email">jay@museionholdings.xyz</div>
-      <div class="contact-hint">Curious · introductions · the work itself</div>
-    </a>
-  </div>
-
-  <div class="section-prose" style="margin-top: 2rem;">
-    <p style="font-size: 0.875rem; color: var(--text-4);"><em>The mailbox is single-routed for now — one inbox, one founder. As the team grows, the routing splits across the canonical addresses (investors@, partnerships@, press@). Until then: jay@ catches everything, replies sit on the same desk, and you don't get bounced through assistants.</em></p>
-  </div>
-</section>
-
-<!-- ─── §  THE ORDER  ─────────────────────────────────────────── -->
+<!-- ─── §  THE ORDER ────────────────────────────────────────────────── -->
 <section id="order">
-  <div class="section-label">The Order</div>
-  <h2 class="section-intro">The <span class="accent">Gentlemen of Muse</span> are the human governance layer. Reputation-weighted, not capital-weighted.</h2>
-
-  <div class="section-prose">
-    <p>Thirteen founding seats. A bond posted per seat. A constitution of seven non-negotiable codes — <em>truth before tribe</em>, hands clean of insider trades, no secret entanglements, confront in private and align in public. The order adjudicates Veritas disputes, holds a 1.5× governance weight on Museion proposals, and stewards the cultural integrity of the whole house.</p>
-    <p>Membership is earned, not bought. The seat is not for sale.</p>
+  <div class="container narrow">
+    <div class="section-label">The Order</div>
+    <h2 class="section-title">
+      The <span class="accent">Gentlemen of Muse</span> are the human governance layer. Reputation-weighted, not capital-weighted.
+    </h2>
+    <p class="section-prose">
+      Thirteen founding seats. A bond posted per seat. A constitution of seven non-negotiable codes — <em>truth before tribe</em>, hands clean of insider trades, no secret entanglements, confront in private and align in public. The Order adjudicates Veritas disputes, holds a 1.5× governance weight on Museion proposals, and stewards the cultural integrity of the whole house.
+    </p>
+    <div class="pull">
+      Membership is earned, not bought. The seat is not for sale.
+    </div>
   </div>
 </section>
 
-<footer>
-  <div class="footer-text">
-    Museion · House of Museion<br />
-    A Museion Holdings company · April 2026<br />
-    For the Gentlemen of Muse<br />
-    <span style="opacity:0.7;">© 2026 Museion Holdings Limited · all rights reserved</span>
+<!-- ─── §  GET IN TOUCH ─────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="container narrow">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">
+      One mailbox. One human. <span class="accent">Reply within two working days.</span>
+    </h2>
+
+    <div class="contact-card">
+      <div>
+        <div class="contact-label">Direct to founder</div>
+        <a class="contact-mailbox" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Hello">jay@museionholdings.xyz</a>
+        <p class="contact-hint">For investor conversations · partnerships · press · or just a question. The mailbox is single-routed for now — one inbox, one founder. Replies sit on the same desk; you don't get bounced through assistants.</p>
+      </div>
+      <div>
+        <a class="cta cta-primary" href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Hello">Write to Jay</a>
+      </div>
+    </div>
   </div>
-  <div class="footer-brand">Æther<span class="kaizen-foot">改善</span></div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Museion · <span class="gradient">House of Museion</span></div>
+        <p class="footer-blurb">A sovereign-AI-first holding company. Three pillars — Intelligence, Truth, Legacy. Eight brand packs, one parent. The work is built to outlast the founder.</p>
+        <div class="footer-kanji">改善</div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Sitemap</div>
+        <ul>
+          <li><a href="#house">The House</a></li>
+          <li><a href="#build">What We Build</a></li>
+          <li><a href="#brands">Brand House</a></li>
+          <li><a href="#family">Family Wing</a></li>
+          <li><a href="#investors">For Investors</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <ul>
+          <li><a href="#order">The Order</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Press">Press</a></li>
+          <li><a href="mailto:jay@museionholdings.xyz?subject=Museion%20Holdings%20%E2%80%94%20Partnership">Partnerships</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Legal</div>
+        <ul>
+          <li>Museion Holdings Limited</li>
+          <li>Registered: UK (England &amp; Wales)</li>
+          <li>Token side: Veritas Foundation (Cayman)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-rule"></div>
+    <div class="footer-bar">
+      <span>© 2026 Museion Holdings Limited · all rights reserved</span>
+      <span>Sealed April 2026 · v1.0</span>
+    </div>
+  </div>
 </footer>
+
+<script>
+  (function() {
+    var KEY = 'museionholdings-theme';
+    var root = document.documentElement;
+    try {
+      var saved = localStorage.getItem(KEY);
+      if (saved === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.setAttribute('data-theme', 'light');
+    } catch (e) { root.setAttribute('data-theme', 'light'); }
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', function() {
+        var cur = root.getAttribute('data-theme') || 'light';
+        var next = (cur === 'dark') ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem(KEY, next); } catch (e) {}
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

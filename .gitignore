@@ -24,3 +24,8 @@ yarn-debug.log*
 # Dev push artefacts (one-shot scripts + their logs)
 _*.bat
 _*log.txt
+
+# Redesign proposals + previews (working files, not for live deploy)
+_REDESIGN_*.md
+_preview-*.html
+_proposal-*.md
