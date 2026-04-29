@@ -8,7 +8,7 @@ The public-facing site for **Museion Holdings** (legal name) / **House of Museio
 
 ```
 _museionholdings-site/
-├── index.html              ← homepage (the brand house, the family wing, the order)
+├── index.html              ← homepage (House · Brand House · Family Wing · Investors · Contact · Order)
 ├── vercel.json             ← static-deploy config + headers
 ├── README.md               ← this file
 ├── favicon.ico             ← root-level assets (Vercel serves these from /)
@@ -17,15 +17,11 @@ _museionholdings-site/
 ├── apple-touch-icon.png
 ├── museion-logo.png        ← parent mark
 ├── museion-og.png          ← Open Graph image (1200×630)
-├── public/                 ← duplicate of root assets (defensive, OK to delete if not needed)
-└── scrolls/                ← The Gentlemen's Playbook (moved over from museion.yakkstudios.xyz)
-    ├── index.html          ← scrolls index page
-    ├── scroll-001.html     ← The Personal Aether Protocol
-    ├── scroll-002.html     ← Sovereign AI Defense
-    ├── scroll-004.html     ← Aether: The Loyal Intelligence
-    ├── scroll-013.html     ← Memory as Moat
-    └── scroll-016.html     ← The Non-Greedy Covenant
+├── public/                 ← duplicate of root assets (defensive)
+└── img/brand-house/        ← 8 brand pack mark thumbnails (used by the homepage grid)
 ```
+
+> **Scrolls were here in v0.2–v0.5 and have been removed in v0.6.** The Gentlemen's Playbook scrolls now live exclusively on `museion.yakkstudios.xyz` (the private Core 4 / Gentlemen access surface). The new public domain `museionholdings.xyz` is the legal-entity, investor-facing surface and does not host gated content. See "3-tier scroll archive" below.
 
 ---
 
@@ -33,10 +29,28 @@ _museionholdings-site/
 
 | Route | Page | Notes |
 |---|---|---|
-| `/` | Homepage | Hero · House · Brand House grid · Scrolls preview · Family Wing · Order · Footer |
-| `/scrolls/` | The Gentlemen's Playbook | Same five scrolls, full index |
-| `/scrolls/scroll-XXX.html` | Individual scroll | Direct-link compatible with previous URLs on `museion.yakkstudios.xyz` |
+| `/` | Homepage | Hero · House · Brand House grid · Family Wing · Investors · Contact · Order · Footer |
 | `/favicon.ico` etc. | Site assets | Cached aggressively |
+| `/img/brand-house/*` | Brand pack mark thumbnails | Embedded in the homepage Brand House grid |
+
+**Future routes (forthcoming):**
+| `/brand/01-museion/` … `/brand/08-alis-of-aberdeen/` | Dedicated pack pages | v0.7 — turn the Brand House cards into clickable readouts |
+| `/master-plan/` | Public master plan readout | v0.7 — slimmed master plan, replaces mailto-only "Request the master plan" CTA |
+| `/press/` | Press kit + downloadable assets | v0.8 |
+
+---
+
+## 3-tier scroll archive (canonical structure)
+
+Per founder direction, scrolls split across **three tiers** with three audiences:
+
+| Tier | Audience | Where it lives |
+|---|---|---|
+| **1 · Public Scrolls** | Anyone on the open web — sanitised, marketing-grade variants of select philosophy notes | `museionholdings.xyz/scrolls/` (forthcoming) — distinct from Gentlemen Scrolls; written separately or sanitised from existing scrolls |
+| **2 · Gentlemen Scrolls** | Gentlemen of Muse cohort + Core 4 — the "Playbook" tier, philosophy + selected operational scrolls | `museion.yakkstudios.xyz` (the existing private site) — **not** mirrored on `museionholdings.xyz` because the access perk is the point of Gentleman seat |
+| **3 · Internal Dev Scrolls** | Jay + Core 4 only — implementation, KAIZE forensics, founder strategy | Local archive only, never web-hosted |
+
+The archive's existing `YST ARCHIVE CLAUDE_NEW/01_PUBLIC_SCROLLS/` folder name is misleading — those 5 scrolls are actually **Tier 2 (Gentlemen)**. See `MASTER_INDEX.md` for the full mapping.
 
 ---
 
