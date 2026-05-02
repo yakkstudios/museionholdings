@@ -901,4 +901,132 @@
 
     <div class="prose" data-reveal data-reveal-delay="2">
       <p>
-        Every claim in this report is graded against a four-tier evidence framework: <strong>Tier 1</strong> (documented, on-chain anchored, 
+        Every claim in this report is graded against a four-tier evidence framework: <strong>Tier 1</strong> (documented, on-chain anchored, multiple sources), <strong>Tier 2</strong> (interpretive but grounded), <strong>Tier 3</strong> (speculative, flagged), and <strong>Tier 4</strong> (unsupported, refused at publication). Tier 4 entries are explicitly excluded; the public report only carries Tier 1 and Tier 2 with their tier marks visible.
+      </p>
+      <p>
+        Source data: <strong>1,252 Solscan CSV exports</strong>, each containing up to 1,000 high-value transfers (>$1,000 USD), spanning July 2025 to April 2026. Total transfers analysed: <strong>1,230,222</strong>. Total USD volume tracked: <strong>$25,546,223,576</strong>. Wallet identities are anchored against on-chain funding trails first, then cross-referenced with public posts; no wallet is added to a register on social proof alone.
+      </p>
+      <p>
+        <strong>Refusals at intake.</strong> Veritas does not publish bloodline framings, ethnic conflations, or "Rothschild-as-secret-controller" tropes. These are flagged at intake and refused at publication. Naming family members of subjects, including children, is prohibited under Code 05 of the Order. Investigations stop at adults.
+      </p>
+      <p>
+        <strong>Counter-argument.</strong> If you operate any wallet named in this report and dispute a finding, write to the founder mailbox. Corrections are reprinted verbatim. The methodology is the contract.
+      </p>
+    </div>
+
+    <div class="pull" data-reveal data-reveal-delay="3">
+      Patterns are not proof of wrongdoing. The purpose of this report is to make the pattern itself impossible to miss.
+    </div>
+  </div>
+</section>
+
+<!-- ─── §  ATTRIBUTION ─────────────────────────────────────────────── -->
+<section id="attribution">
+  <div class="container narrower">
+    <div class="section-label" data-reveal>Attribution</div>
+    <h2 class="section-title" data-reveal data-reveal-delay="1">
+      Published by <span class="museion">Veritas</span>. The forensic practice of <span class="accent">House of Museion</span>.
+    </h2>
+    <div class="prose" data-reveal data-reveal-delay="2">
+      <p>
+        Veritas is the on-chain forensic intelligence arm of Museion Holdings. It is currently <strong>founder-led</strong>; the structured Network of Truth (multi-investigator, peer-reviewed, bonded contributors) begins once funding is in place. Investigations are released under Veritas attribution, counsel-safe in language, Lana-verified at the entity-label layer, and grounded in the constitutional discipline of House of Museion.
+      </p>
+      <p>
+        For partnerships, sources, or counsel: <strong><a href="mailto:jtwtt2026@gmail.com?subject=Veritas%20%E2%80%94%20Hello" style="color: var(--gold-deep); text-decoration: none; border-bottom: 1px solid var(--gold-deep);">jtwtt2026@gmail.com</a></strong>. One mailbox, one human, replies within two working days.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="museion">Veritas</span> · House of Museion</div>
+        <p class="footer-blurb">The forensic practice of Museion Holdings. Investigations are on-chain anchored, Lana-verified, counsel-safe in language, and graded against the Tier 1&ndash;4 evidence framework.</p>
+        <div class="footer-kanji">改善</div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">This Report</div>
+        <ul>
+          <li><a href="#thesis">The Thesis</a></li>
+          <li><a href="#layer-supply">Layer 01 · Supply</a></li>
+          <li><a href="#layer-channels">Layer 02 · Channels</a></li>
+          <li><a href="#layer-authority">Layer 03 · Authority</a></li>
+          <li><a href="#patterns">Cross-Patterns</a></li>
+          <li><a href="#hardlocked">Hardlocked</a></li>
+          <li><a href="#discipline">Publish Discipline</a></li>
+          <li><a href="#cleared">Cleared</a></li>
+          <li><a href="#adjacent">Adjacent</a></li>
+          <li><a href="#methodology">Methodology</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Holdings</div>
+        <ul>
+          <li><a href="/">Museion Holdings</a></li>
+          <li><a href="/#live">What's Active</a></li>
+          <li><a href="/#build">Three Pillars</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="mailto:jtwtt2026@gmail.com?subject=Veritas%20%E2%80%94%20Source%20%2F%20Tip">Send a tip</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-rule"></div>
+    <div class="footer-bar">
+      <span>&copy; 2026 Museion Holdings &middot; Veritas &middot; all rights reserved</span>
+      <span>Master report v1.1 &middot; 2 May 2026 &middot; &#25913;&#21892;</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var KEY = 'museionholdings-theme';
+    var root = document.documentElement;
+    try {
+      var saved = localStorage.getItem(KEY);
+      if (saved === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.setAttribute('data-theme', 'light');
+    } catch (e) { root.setAttribute('data-theme', 'light'); }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var cur = root.getAttribute('data-theme') || 'light';
+          var next = (cur === 'dark') ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem(KEY, next); } catch (e) {}
+        });
+      }
+
+      var nav = document.getElementById('nav');
+      function onScroll() {
+        if (!nav) return;
+        if (window.scrollY > 12) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        document.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
+      } else {
+        document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('in'); });
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
